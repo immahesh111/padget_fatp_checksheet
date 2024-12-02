@@ -19,7 +19,7 @@ const AddDepartment = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try{
-            const response = await axios.post('http://localhost:5000/api/department/add', department, {
+            const response = await axios.post('https://checksheet-api.onrender.com/api/department/add', department, {
                 headers: {
                     Authorization :`Bearer ${localStorage.getItem('token')}`
                 }

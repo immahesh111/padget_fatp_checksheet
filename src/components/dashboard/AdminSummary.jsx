@@ -8,7 +8,7 @@ const AdminSummary = () => {
   useEffect(() => {
     const fetchSummary = async () => {
       try{
-        const summary = await axios.get('http://localhost:5000/api/dashboard/summary', {
+        const summary = await axios.get('https://checksheet-api.onrender.com/api/dashboard/summary', {
           headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
           }

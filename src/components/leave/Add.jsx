@@ -116,7 +116,7 @@ const Add = () => {
         console.log("Submitting leave data:", leave); // Log leave data before submission
 
         try {
-            const response = await axios.post(`http://localhost:5000/api/leave/add`, leave, {
+            const response = await axios.post(`https://checksheet-api.onrender.com/api/leave/add`, leave, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
