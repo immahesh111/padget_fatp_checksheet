@@ -43,7 +43,7 @@ const AdminSummary = () => {
         <h4 className='text-center text-2xl font-bold'>CheckSheet Details</h4>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-6'>
-          <SummaryCard icon={<FaFileAlt />} text="CheckSheet Applied" number={summary.leaveSummary.appliedFor} color="bg-electric-blue" />
+          <SummaryCard icon={<FaFileAlt />} text="CheckSheet Applied" number={summary.leaveSummary.appliedFor} color="bg-custom-purple" />
           <SummaryCard icon={<FaCheckCircle />} text="CheckSheet Approved" number={summary.leaveSummary.approved} color="bg-neon-green" />
           <SummaryCard icon={<FaHourglassHalf />} text="CheckSheet Pending" number={summary.leaveSummary.pending} color="bg-bright-yellow" />
           <SummaryCard icon={<FaTimesCircle />} text="CheckSheet Rejected" number={summary.leaveSummary.rejected} color="bg-bright-red" />
