@@ -8,8 +8,8 @@ const Add = () => {
 
     const [leave, setLeave] = useState({
         userId: user._id,
-        date: new Date().toISOString().split('T')[0], // Automatically set current date
-        shift: '', // Shift will be set based on user selection
+        date: new Date().toISOString().split('T')[0],
+        shift: '',
         rawMaterialStorage: {
             question1: '',
             question2: '',
