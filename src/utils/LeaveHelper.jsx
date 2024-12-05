@@ -50,13 +50,23 @@ export const LeaveButtons = ({ _id }) => {
     const handleView = () => {
         navigate(`/admin-dashboard/leaves/${_id}`);
     };
+    const handleExport = () => {
+        // Implement the export functionality here
+        console.log(`Exporting data for ID: ${_id}`);
+    };
 
     return (
-        <button
-            className="px-4 py-1 bg-custom-purple rounded text-white hover:bg-teal-600"
-            onClick={() => handleView(_id)}
-        >
-            View
-        </button>
+        <div className="flex space-x-2">
+            <button
+                className="px-4 py-1 bg-custom-purple rounded text-white hover:bg-teal-600"
+                onClick={handleView}>
+                View
+            </button>
+            <button
+                className="px-4 py-1 bg-neon-green rounded text-white hover:bg-blue-600"
+                onClick={handleExport}>
+                Export
+            </button>
+        </div>
     );
 };
