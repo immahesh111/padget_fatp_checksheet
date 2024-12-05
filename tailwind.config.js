@@ -8,7 +8,10 @@ export default {
     extend: {
       fontFamily:{
         "Doto":['Doto','sans-serif']
-      }
+      },
+      colors: {
+        'custom-purple': '#41408a', // Add your custom color here
+      },
     },
   },
   plugins: [],

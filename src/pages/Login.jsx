@@ -74,14 +74,14 @@ const Login = () => {
                         <input type='checkbox' className='form-checkbox'/>
                         <span className='ml-2 text-gray-700'></span>
                     </label>
-                    <a href='#' className='text-#41408a'>
+                    <a href='#' className='text-custom-purple'>
                         Forgot password?
                     </a>
                 </div>
                 <div className='mb-4'>
                 <button
                 type='submit'
-                className='w-full bg-#41408a text-white py-2'>
+                className='w-full bg-custom-purple text-white py-2'>
                     Login
                 </button>
                 </div>
