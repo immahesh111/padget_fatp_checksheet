@@ -171,12 +171,12 @@ export const LeaveButtons = ({ row }) => {
     return (
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-2">
             <button
-                className="px-5 py-1 bg-custom-purple rounded text-white hover:bg-purple-600 mb-2 md:mb-0"
+                className="px-3 py-1 bg-custom-purple rounded text-white hover:bg-purple-600 mb-2 md:mb-0"
                 onClick={handleView}>
                 View
             </button>
             <button
-                className="px-5 py-1 bg-electric-blue rounded text-white hover:bg-blue-600"
+                className="px-3 py-1 bg-electric-blue rounded text-white hover:bg-blue-600"
                 onClick={handleExport}>
                 Export
             </button>
