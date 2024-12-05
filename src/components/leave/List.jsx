@@ -60,10 +60,10 @@ const List = () => {
                     <Link to="/employee-dashboard/add-leave" className='px-4 py-1 bg-custom-purple rounded text-white'>Fill New CheckSheet</Link>}
             </div>
 
-            <table className='w-full text-sm text-left text-gray-200 mt-6'>
+            <table className='w-full text-sm text-left text-gray-700 mt-6'>
                 <thead className='text-xs text-gray-600 uppercase bg-gray-500 border border-gray-200'>
                     <tr>
-                        <th className='px-6 py-3'>SNO</th>
+                        <th className='px-6 py-3'>S.NO</th>
                         <th className='px-6 py-3'>Day</th> {/* Day column */}
                         <th className='px-6 py-3'>Time</th> {/* Time column */}
                         <th className='px-6 py-3'>Shift</th> {/* Shift column */}
@@ -75,7 +75,7 @@ const List = () => {
                     {leaves.map((leave) => (
                         <tr
                             key={leave._id}
-                            className='bg-white border-b dark:bg-gray-800 dark:border-gray-700'>
+                            className='bg-white border-b dark:bg-gray-500 dark:border-gray-400'>
 
                             <td className='px-6 py-3'>{sno++}</td>
                             {/* Display Day */}
