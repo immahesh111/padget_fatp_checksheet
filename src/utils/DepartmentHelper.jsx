@@ -49,10 +49,10 @@ export const DepartmentButtons = ({_id, onDepartmentDelete}) => {
     
     return(
         <div className="flex space-x-3">
-            <button className="px-3 py-1 bg-teal-600 text-white"
+            <button className="px-3 py-1 bg-custom-purple text-white"
                 onClick={() => navigate(`/admin-dashboard/department/${_id}`)}
             >Edit</button>
-            <button className="px-3 py-1 bg-red-600 text-white"
+            <button className="px-3 py-1 bg-bright-red text-white"
             onClick={() => handleDelete(_id)}>Delete</button>
     </div>
     )

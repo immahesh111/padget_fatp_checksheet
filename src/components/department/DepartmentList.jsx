@@ -66,7 +66,7 @@ const DepartmentList = () => {
 
       <div className='flex justify-between items-center'>
         <input type="text" placeholder='Search By Dept Name' className='px-4 py-0.5 border' onChange={filterDepartments}></input>
-        <Link to="/admin-dashboard/add-department" className='px-4 py-1 bg-teal-600 rounded text-white'>Add New Department</Link>
+        <Link to="/admin-dashboard/add-department" className='px-4 py-1 bg-custom-purple rounded text-white'>Add New Department</Link>
       </div>
       <div className='mt-5'>
         <DataTable
