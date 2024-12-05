@@ -6,9 +6,9 @@ const NavBar = ({ toggleSidebar }) => {
   const { user, logout } = useAuth();
 
   return (
-    <div className='flex items-center text-white justify-between h-12 bg-white-400 px-5'>
+    <div className='flex items-center text-white justify-between h-12 bg-white px-5'>
       {/* Hamburger icon for mobile */}
-      <button onClick={toggleSidebar} className='md:hidden bg-custom-purple'>
+      <button onClick={toggleSidebar} className='md:hidden text-custom-purple'>
         <FaBars />
       </button>
       <p className='text-custom-purple'> Welcome {user.name}</p>

@@ -10,7 +10,7 @@ export default {
         "Doto":['Doto','sans-serif']
       },
       colors: {
-        'custom-purple': '#41408a', // Add your custom color here
+        'custom-purple': '#2a2b84', // Add your custom color here
       },
     },
   },
