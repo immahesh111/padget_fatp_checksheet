@@ -1,62 +1,63 @@
-import React, {createContext,useContext, useEffect, useState } from 'react'
-import axios from 'axios'
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 
-const userContext = createContext()
-const authContext = ({children}) => {
-    const [user, setUser] =useState(null)
-    const [loading, setLoading] = useState(true)
-    
+// Create a context for user authentication
+const userContext = createContext();
+
+// Auth context provider component
+const authContext = ({ children }) => {
+    const [user, setUser] = useState(null); // State to hold user information
+    const [loading, setLoading] = useState(true); // State to indicate loading status
 
     useEffect(() => {
         const verifyUser = async () => {
-           
-            try{
-                const token = localStorage.getItem('token')
-                if(token){
-                 
-                const response = await axios.get('https://checksheet-api.onrender.com/api/auth/verify', {
-                    headers: {
-                        Authorization : `Bearer ${token}`,
-                    },
-                }) ;
-                console.log(response)
-                if(response.data.success) {
-                    setUser(response.data.user)
+            try {
+                const token = localStorage.getItem('token'); // Get token from local storage
+                if (token) {
+                    const response = await axios.get('https://checksheet-api.onrender.com/api/auth/verify', {
+                        headers: {
+                            Authorization: `Bearer ${token}`, // Set authorization header
+                        },
+                    });
+                    
+                    console.log(response); // Log response for debugging
+                    if (response.data.success) {
+                        setUser(response.data.user); // Set user state if verification is successful
+                    } else {
+                        setUser(null); // Reset user state if verification fails
+                    }
+                } else {
+                    setUser(null); // Reset user state if no token is found
                 }
-            } else{
-               setUser(null)
-               setLoading(false)
+            } catch (error) {
+                console.log(error); // Log error for debugging
+                setUser(null); // Reset user state on error
+            } finally {
+                setLoading(false); // Set loading to false after verification attempt
             }
-        }
-             catch(error){
-                console.log(error)
-                if(error.response && !error.response.data.error){
-                    setUser(null)
-                }
-             } finally {
-                setLoading(false)
-             }
-        }
+        };
 
-        verifyUser()
-    },[]);
+        verifyUser(); // Call the function to verify the user on component mount
+    }, []);
 
     const login = (user) => {
-        setUser(user)
-    }
+        setUser(user); // Set user state when logging in
+    };
 
     const logout = () => {
-        setUser(null)
-        localStorage.removeItem("token")
-    }
+        setUser(null); // Reset user state when logging out
+        localStorage.removeItem("token"); // Remove token from local storage
+    };
 
-  return (
-   <userContext.Provider value={{user, login, logout, loading}}>
-        {children}
-   </userContext.Provider>
-  )
-}
+    return (
+        <userContext.Provider value={{ user, login, logout, loading }}>
+            {children} {/* Render child components */}
+        </userContext.Provider>
+    );
+};
 
-export const useAuth =() => useContext(userContext)
+// Custom hook to use the auth context
+export const useAuth = () => useContext(userContext);
 
-export default authContext
+// Export the authContext component for wrapping the application
+export default authContext;
