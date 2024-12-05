@@ -67,7 +67,7 @@ const List = () => {
 
       <div className='flex justify-between items-center'>
         <input type="text" placeholder='Search By Dept Name' className='px-4 py-0.5 border' onChange={handleFilter}></input>
-        <Link to="/admin-dashboard/add-employee" className='px-4 py-1 bg-teal-600 rounded text-white'>Add New CheckSheet</Link>
+        <Link to="/admin-dashboard/add-employee" className='px-4 py-1 bg-custom-purple rounded text-white'>Add New CheckSheet</Link>
       </div>
       <div className='mt-6'>
         <DataTable columns={columns} data={filteredEmployee} pagination/>
