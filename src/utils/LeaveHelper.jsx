@@ -80,7 +80,7 @@ export const LeaveButtons = ({ row }) => {
     <p><strong>Status:</strong> ${leaveDetails.status}</p>
     <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
           
-   <h2 style="font-weight: bold; margin-bottom: 20px;">Raw Material Storage Questions</h2>
+   <h2 style="font-weight: bold; margin-top: 20px;">Raw Material Storage Questions</h2>
 <p>1. Whether Component reels as per feeder list and module based system? <strong>${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</strong></p>
 <p>2. Whether component reels are in good condition? <strong>${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</strong></p>
 <p>3. Whether component MBB puncher (MSL)? <strong>${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</strong></p>
