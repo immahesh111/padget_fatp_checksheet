@@ -11,8 +11,8 @@ export default {
       },
       colors: {
         'custom-purple': '#2a2b84',
-        'bright-teal':'#00FFD1',
-        'bright-yellow':'#FFFF00',
+        'bright-teal':'#009193',
+        'bright-yellow':'#FFD700',
         'neon-green':'#39FF14',
         'electric-blue':'#007FFF',
         'luminous-cyan':'#00FFFF',
