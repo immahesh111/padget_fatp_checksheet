@@ -54,7 +54,7 @@ export const LeaveButtons = ({ _id }) => {
 
     const handleExport = async () => {
         // Fetch the leave details to export
-        const response = await fetch(`https://checksheet-api.onrender.com/api/leave/detail/${_id}`, {
+        const response = await fetch(`https://checksheet-api.onrender.com/api/leave/detail/${row._id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -64,13 +64,19 @@ export const LeaveButtons = ({ _id }) => {
             const data = await response.json();
             const leaveDetails = data.leave;
 
+             // Check if leaveDetails is defined
+             if (!leaveDetails) {
+                console.error("Leave details not found");
+                return;
+            }
+
             // Create a new HTML element to render the leave details
             const element = document.createElement('div');
             element.innerHTML = `
                  <h1 style="text-align: center;">Leave Details</h1>
-    <p><strong>Employee ID:</strong> ${leaveDetails.employeeId}</p>
-    <p><strong>Name:</strong> ${leaveDetails.name}</p>
-    <p><strong>Department:</strong> ${leaveDetails.department}</p>
+    <p><strong>Employee ID:</strong> ${row.employeeId}</p>
+    <p><strong>Name:</strong> ${row.name}</p>
+    <p><strong>Department:</strong> ${row.department}</p>
     <p><strong>Status:</strong> ${leaveDetails.status}</p>
     <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
 
