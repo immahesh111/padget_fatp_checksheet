@@ -19,12 +19,11 @@ import AddLeave from './components/leave/Add'
 import Setting from './components/EmployeeDashboard/Setting';
 import Table from './components/leave/Table';
 import Detail from './components/leave/Detail';
-import { useAuth } from './context/authContext';
-import Add2 from './components/leave/Add2';
+
 
 
 function App() {
-  const { user } = useAuth(); // Get the current user
+
   return (
     <BrowserRouter>
       <Routes>
@@ -68,11 +67,7 @@ function App() {
 
           <Route path='/employee-dashboard/profile/:id' element={<View/>}></Route>
           <Route path='/employee-dashboard/leaves/:id' element={<LeaveList/>}></Route>
-          <Route path="/employee-dashboard/add-leave" element={
-                    user.employeeId === "ProcessAudit_01" ? <AddLeave /> :
-                    user.employeeId === "ProcessAudit_02" ? <Add2 /> :
-                    <Navigate to="/employee-dashboard" />
-                } />
+          <Route path='/employee-dashboard/add-leave' element={<AddLeave/>}></Route>
           <Route path='/employee-dashboard/setting' element={<Setting/>}></Route>
 
         </Route>
