@@ -57,11 +57,11 @@ const List = () => {
             <div className='flex justify-between items-center'>
                 <input type="text" placeholder='Search By Dept Name' className='px-4 py-0.5 border'></input>
                 {user.role === "employee" && 
-                    <Link to="/employee-dashboard/add-leave" className='px-4 py-1 bg-teal-600 rounded text-white'>Fill New CheckSheet</Link>}
+                    <Link to="/employee-dashboard/add-leave" className='px-4 py-1 bg-custom-purple rounded text-white'>Fill New CheckSheet</Link>}
             </div>
 
-            <table className='w-full text-sm text-left text-gray-500 mt-6'>
-                <thead className='text-xs text-gray-700 uppercase bg-gray-500 border border-gray-200'>
+            <table className='w-full text-sm text-left text-gray-200 mt-6'>
+                <thead className='text-xs text-gray-600 uppercase bg-gray-500 border border-gray-200'>
                     <tr>
                         <th className='px-6 py-3'>SNO</th>
                         <th className='px-6 py-3'>Day</th> {/* Day column */}
