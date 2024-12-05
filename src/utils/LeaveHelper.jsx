@@ -79,34 +79,34 @@ export const LeaveButtons = ({ row }) => {
     <p><strong>Department:</strong> ${row.department}</p>
     <p><strong>Status:</strong> ${leaveDetails.status}</p>
     <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-
-    <h2>Raw Material Storage Questions</h2>
+            <div></div>
+    <h2 style="font-weight: bold;">Raw Material Storage Questions</h2>
     <p>1. Whether Component reels as per feeder list and module based system? ${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</p>
     <p>2. Whether component reels are in good condition? ${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</p>
     <p>3. Whether component MBB puncher (MSL)? ${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</p>
     <p>4. Loose material should have MSL tracking label during component open from packet? ${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</p>
-
-    <h2>Solder Paste Management Questions</h2>
+<div></div>
+    <h2 style="font-weight: bold;">Solder Paste Management Questions</h2>
     <p>5. Is correct solder paste used (brand/model)? ${leaveDetails.solderPasteManagement?.question5 || 'Not answered'}</p>
     <p>6. Solder paste/glue storage temperature (0–10°C)? ${leaveDetails.solderPasteManagement?.question6 || 'Not answered'}</p>
     <p>7. Check solder paste expiry date? ${leaveDetails.solderPasteManagement?.question7 ? new Date(leaveDetails.solderPasteManagement.question7).toLocaleDateString() : 'Not answered'}</p>
     <p>8. Check solder paste thawing time? ${leaveDetails.solderPasteManagement?.question8 || 'Not answered'}</p>
     <p>9. Is the secondary use of solder paste used within 12 hours of the specific time? ${leaveDetails.solderPasteManagement?.question9 || 'Not answered'}</p>
     <p>10. The solder paste consumed as per FIFO? ${leaveDetails.solderPasteManagement?.question10 || 'Not answered'}</p>
-
-    <h2>Loader Management Questions</h2>
+<div></div>
+    <h2 style="font-weight: bold;">Loader Management Questions</h2>
     <p>11. Is PCB loading direction correct? ${leaveDetails.loaderManagement?.question12 || 'Not answered'}</p>
     <p>12. Is PCB pallet at the front of magazine? ${leaveDetails.loaderManagement?.question13 || 'Not answered'}</p>
     <p>13. PCB panel max 50 no. should be in a magazine? ${leaveDetails.loaderManagement?.question14 || 'Not answered'}</p>
     <p>14. Whether each pallet is loaded in each magazine slot? ${leaveDetails.loaderManagement?.question15 || 'Not answered'}</p>
     <p>15. Whether push position is in centre of PCB Pallet? ${leaveDetails.loaderManagement?.question16 || 'Not answered'}</p>
-
-    <h2>GKG Printer Management Questions</h2>
+<div></div>
+    <h2 style="font-weight: bold;">GKG Printer Management Questions</h2>
     <p>16. Stencil No: ${leaveDetails.gkgPrinterManagement?.question17_stencilNo || 'Not answered'}</p>
     <p>17. TOP: ${leaveDetails.gkgPrinterManagement?.question17_top || 'Not answered'}</p>
     <p>18. BOTTOM: ${leaveDetails.gkgPrinterManagement?.question17_bottom || 'Not answered'}</p>
     <p>19. Is stencil cleaning and tension checklist updated? ${leaveDetails.gkgPrinterManagement?.question18 || 'Not answered'}</p>
-
+<div></div>
     <!-- Printing Parameters -->
     <h4 style="font-weight: bold;">Printing Parameters</h4>
     <h5>Squeege Pressure</h5>
@@ -116,8 +116,8 @@ export const LeaveButtons = ({ row }) => {
         <p>Clean Rate: ${leaveDetails.gkgPrinterManagement?.question19_cleanRate || 'Not answered'}</p>
         <p>Clean Mode: ${leaveDetails.gkgPrinterManagement?.question19_cleanMode || 'Not answered'}</p>
     </div>
-
-    <h2>SPI Management Questions</h2>
+<div></div>
+    <h2 style="font-weight: bold;">SPI Management Questions</h2>
     <div style="margin-left: 20px;">
         <p>21. SPI m/c program name matches the actual product model? ${leaveDetails.spiManagement?.question21 || 'Not answered'}</p>
         <p>22. Whether SPI m/c detects the defects? ${leaveDetails.spiManagement?.question22 || 'Not answered'}</p>
