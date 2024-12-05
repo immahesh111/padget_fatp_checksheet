@@ -12,11 +12,12 @@ export default {
       colors: {
         'custom-purple': '#2a2b84',
         'bright-teal':'#009193',
+        'custom-gray':'#999999',
         'bright-yellow':'#F6BE00',
         'neon-green':'#39FF14',
         'electric-blue':'#007FFF',
         'luminous-cyan':'#00FFFF',
-        'bright-red':'#FF0000'
+        'bright-red':'#C32148'
       },
     },
   },
