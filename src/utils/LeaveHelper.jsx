@@ -45,11 +45,11 @@ export const columns = [
     },
 ];
 
-export const LeaveButtons = ({ _id }) => {
+export const LeaveButtons = ({ row }) => {
     const navigate = useNavigate();
 
     const handleView = () => {
-        navigate(`/admin-dashboard/leaves/${_id}`);
+        navigate(`/admin-dashboard/leaves/${row._id}`);
     };
 
     const handleExport = async () => {
