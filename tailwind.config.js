@@ -14,7 +14,7 @@ export default {
         'bright-teal':'#009193',
         'custom-gray':'#999999',
         'bright-yellow':'#F6BE00',
-        'neon-green':'#39FF14',
+        'neon-green':'#0BDA51',
         'electric-blue':'#007FFF',
         'luminous-cyan':'#00FFFF',
         'bright-red':'#C32148'
