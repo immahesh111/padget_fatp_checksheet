@@ -5,14 +5,14 @@ import logo from '../../assets/Padget.png';
 
 const AdminSidebar = ({ isOpen }) => {
   return (
-    <div className={`bg-gray-400 text-white h-screen fixed left-0 top-0 bottom-0 space-y-2 w-64 transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
+    <div className={`bg-custom-purple text-white h-screen fixed left-0 top-0 bottom-0 space-y-2 w-64 transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
       <div className='bg-white h-12 flex items-center justify-center'>
         <img src={logo} alt="CheckSheets Logo" className='h-10' />
       </div>
       <div className='px-4'>
         <NavLink 
           to="/admin-dashboard"
-          className={({ isActive }) => `${isActive ? "bg-custom-purple" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
+          className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
           end
         >
           <FaTachometerAlt />
@@ -21,42 +21,42 @@ const AdminSidebar = ({ isOpen }) => {
 
         <NavLink 
           to="/admin-dashboard/employees"
-          className={({ isActive }) => `${isActive ? "bg-custom-purple" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
+          className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
           <FaUsers />
-          <span>CheckSheets</span>
+          <span className='text-custom-purple'>CheckSheets</span>
         </NavLink>
 
         <NavLink 
           to="/admin-dashboard/departments"
-          className={({ isActive }) => `${isActive ? "bg-custom-purple" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
+          className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
           <FaBuilding />
-          <span>Departments</span>
+          <span className='text-custom-purple'>Departments</span>
         </NavLink>
 
         <NavLink 
           to="/admin-dashboard/leaves"
-          className={({ isActive }) => `${isActive ? "bg-custom-purple" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
+          className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
           <FaCalendarAlt />
-          <span>Approval</span>
+          <span className='text-custom-purple'>Approval</span>
         </NavLink>
 
         <NavLink 
           to="/admin-dashboard/report"
-          className={({ isActive }) => `${isActive ? "bg-custom-purple" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
+          className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
           <FaMoneyBillWave />
-          <span>Report</span>
+          <span className='text-custom-purple'>Report</span>
         </NavLink>
 
         <NavLink 
           to="/admin-dashboard/settings"
-          className={({ isActive }) => `${isActive ? "bg-custom-purple" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
+          className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
           <FaCogs />
-          <span>Settings</span>
+          <span className='text-custom-purple'>Settings</span>
         </NavLink>
       </div>
     </div>
