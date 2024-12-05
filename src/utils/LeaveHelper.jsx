@@ -169,9 +169,9 @@ export const LeaveButtons = ({ row }) => {
     };
 
     return (
-        <div className="flex space-x-2">
+        <div className="flex flex-col md:flex-row space-x-0 md:space-x-2">
             <button
-                className="px-4 py-1 bg-custom-purple rounded text-white hover:bg-purple-600"
+                className="px-4 py-1 bg-custom-purple rounded text-white hover:bg-purple-600 mb-2 md:mb-0"
                 onClick={handleView}>
                 View
             </button>
