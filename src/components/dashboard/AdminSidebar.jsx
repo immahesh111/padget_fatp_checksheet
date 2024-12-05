@@ -10,53 +10,56 @@ const AdminSidebar = ({ isOpen }) => {
         <img src={logo} alt="CheckSheets Logo" className='h-10' />
       </div>
       <div className='px-4'>
-        <NavLink 
+        <NavLink
           to="/admin-dashboard"
-          className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
+          className={({ isActive }) => `
+    ${isActive ? "bg-white" : ""} 
+    flex items-center space-x-4 block py-2.5 px-4 rounded
+  `}
           end
         >
-          <FaTachometerAlt />
-          <span>Dashboard</span>
+          <FaTachometerAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
+          <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Dashboard</span>
         </NavLink>
 
-        <NavLink 
+        <NavLink
           to="/admin-dashboard/employees"
           className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
-          <FaUsers />
-          <span className='text-custom-purple'>CheckSheets</span>
+          <FaUsers className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
+          <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>CheckSheets</span>
         </NavLink>
 
-        <NavLink 
+        <NavLink
           to="/admin-dashboard/departments"
           className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
-          <FaBuilding />
-          <span className='text-custom-purple'>Departments</span>
+          <FaBuilding className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
+          <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Departments</span>
         </NavLink>
 
-        <NavLink 
+        <NavLink
           to="/admin-dashboard/leaves"
           className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
-          <FaCalendarAlt />
-          <span className='text-custom-purple'>Approval</span>
+          <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`}/>
+          <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Approval</span>
         </NavLink>
 
-        <NavLink 
+        <NavLink
           to="/admin-dashboard/report"
           className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
-          <FaMoneyBillWave />
-          <span className='text-custom-purple'>Report</span>
+          <FaMoneyBillWave className={`${isActive ? 'text-custom-purple' : 'text-white'}`}/>
+          <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Report</span>
         </NavLink>
 
-        <NavLink 
+        <NavLink
           to="/admin-dashboard/settings"
           className={({ isActive }) => `${isActive ? "bg-white" : ""} flex items-center space-x-4 block py-2.5 px-4 rounded`}
         >
-          <FaCogs />
-          <span className='text-custom-purple'>Settings</span>
+          <FaCogs className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
+          <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Settings</span>
         </NavLink>
       </div>
     </div>
