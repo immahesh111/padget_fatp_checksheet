@@ -97,7 +97,7 @@ const EditDepartment = () => {
             rows="4"></textarea>
         </div>
 
-        <button type='submit' className='w-full mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded'>Edit Department</button>
+        <button type='submit' className='w-full mt-6 bg-custom-purple hover:bg-teal-700 text-white font-bold py-2 px-4 rounded'>Edit Department</button>
     </form>
 </div>
 }</>
