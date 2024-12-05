@@ -40,7 +40,7 @@ export const columns = [
     },
     {
         name: "Action",
-        selector:(row) => row.action, // Use LeaveButtons for action
+        cell: (row) => <LeaveButtons row={row} />, // Pass entire row to LeaveButtons
         center: true,
     },
 ];
