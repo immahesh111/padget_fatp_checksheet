@@ -152,7 +152,7 @@ export const LeaveButtons = ({ row }) => {
             // Set options for html2pdf
             const options = {
                 margin:       1,
-                filename:     `${leaveDetails.department}-${new Date().toISOString().slice(0, 10)}.pdf`,
+                filename:     `${row.department}-${new Date().toISOString().slice(0, 10)}.pdf`,
                 image:        { type: 'jpeg', quality: 0.98 },
                 html2canvas:  { scale: 2 },
                 jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
