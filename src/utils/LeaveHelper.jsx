@@ -108,7 +108,7 @@ export const LeaveButtons = ({ row }) => {
 <p>19. Is stencil cleaning and tension checklist updated? <strong>${leaveDetails.gkgPrinterManagement?.question18 || 'Not answered'}</strong></p>
 
 <!-- Printing Parameters -->
-<h4 style="font-weight: bold; margin-top: 20px;">Printing Parameters</h4>
+<h4 style="font-weight: bold; margin-top: 60px;">Printing Parameters</h4>
 <h5><strong>Squeege Pressure</strong></h5>
 <div style="margin-left: 20px;">
     <p>Print Speed: <strong>${leaveDetails.gkgPrinterManagement?.question19_printSpeed || 'Not answered'}</strong></p>
@@ -138,7 +138,7 @@ export const LeaveButtons = ({ row }) => {
 
         <!-- Height Section -->
         <h4 style="font-weight: bold;">Height</h4>
-        <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; justify-content: space-between; margin-bottom-10px;">
             <div><strong>Minimum Height:</strong> ${leaveDetails.spiManagement.heightStringMinimum || 'Not answered'}</div>
             <div><strong>Highest Height:</strong>${leaveDetails.spiManagement.heightStringHighest || 'Not answered'}</div>
         </div>
