@@ -52,7 +52,7 @@ const Detail = () => {
             {leave ? (
                 <div className='max-w-6xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
                     <h2 className='text-2xl font-bold mb-8 text-center'>
-                        Leave Details
+                        CheckSheet Details
                     </h2>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                         {/* Left Column */}
