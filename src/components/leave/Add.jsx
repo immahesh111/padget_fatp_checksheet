@@ -213,33 +213,61 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     2. Whether component reels are in good condition?
                                 </label>
-                                <select
-                                    name="rawMaterialStorage.question2"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question2"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question2"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 3 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    3. Whether component MBB puncher(MSL)?
+                                    3. Whether component MBB puncher (MSL)?
                                 </label>
-                                <select
-                                    name="rawMaterialStorage.question3"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question3"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question3"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 4 */}
@@ -247,16 +275,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     4. Loose material should have MSL tracking label during component open from packet?
                                 </label>
-                                <select
-                                    name="rawMaterialStorage.question4"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question4"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question4"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
                         </>
                     )}
@@ -272,16 +314,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     5. Is correct solder paste used (brand/model)?
                                 </label>
-                                <select
-                                    name="solderPasteManagement.question5"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="solderPasteManagement.question5"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="solderPasteManagement.question5"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 6 */}
@@ -333,16 +389,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     9. Is the secondary use of solder paste used within 12 hours of the specific time?
                                 </label>
-                                <select
-                                    name="solderPasteManagement.question9"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="solderPasteManagement.question9"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="solderPasteManagement.question9"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 10 */}
@@ -350,16 +420,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     10. The solder paste consumed as per FIFO?
                                 </label>
-                                <select
-                                    name="solderPasteManagement.question10"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="solderPasteManagement.question10"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="solderPasteManagement.question10"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 11 */}
@@ -367,16 +451,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     11. Is solder paste tracking sheet and refrigerator temp. checksheet updated?
                                 </label>
-                                <select
-                                    name="solderPasteManagement.question11"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="solderPasteManagement.question11"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="solderPasteManagement.question11"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
                         </>
                     )}
@@ -393,16 +491,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     12. Is PCB loading direction correct?
                                 </label>
-                                <select
-                                    name="loaderManagement.question12"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question12"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question12"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 13 */}
@@ -410,67 +522,123 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     13. Is PCB pallet at the front of magazine?
                                 </label>
-                                <select
-                                    name="loaderManagement.question13"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question13"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question13"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 14 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    14.PCB panel max 50 no. should be in a magazine?
+                                    14. PCB panel max 50 no. should be in a magazine?
                                 </label>
-                                <select
-                                    name="loaderManagement.question14"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question14"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question14"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 15 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    15.Whether each pallet is loaded in each magazine slot?
+                                    15. Whether each pallet is loaded in each magazine slot?
                                 </label>
-                                <select
-                                    name="loaderManagement.question15"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question15"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question15"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 16 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    16.Whether push position is in centre of PCB Pallet?
+                                    16. Whether push position is in centre of PCB Pallet?
                                 </label>
-                                <select
-                                    name="loaderManagement.question16"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question16"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="loaderManagement.question16"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
 
@@ -531,16 +699,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     18. Is stencil cleaning and tension checklist updated?
                                 </label>
-                                <select
-                                    name="gkgPrinterManagement.question18"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="gkgPrinterManagement.question18"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="gkgPrinterManagement.question18"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Printing Parameters Heading */}
@@ -633,16 +815,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     21. SPI m/c program name matches the actual product model?
                                 </label>
-                                <select
-                                    name="spiManagement.question21"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="spiManagement.question21"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="spiManagement.question21"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 22 */}
@@ -650,16 +846,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     22. Whether SPI m/c detects the defects?
                                 </label>
-                                <select
-                                    name="spiManagement.question22"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="spiManagement.question22"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="spiManagement.question22"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Volume Section */}
@@ -765,16 +975,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     25. Whether the SMT material corresponds to the BOM?
                                 </label>
-                                <select
-                                    name="pickAndPlaceManagement.question25"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question25"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question25"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 26 */}
@@ -782,16 +1006,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     26. To check whether any ECN/DCN have been done online or running model?
                                 </label>
-                                <select
-                                    name="pickAndPlaceManagement.question26"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question26"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question26"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 27 */}
@@ -799,16 +1037,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     27. To check whether component verification has been done before start of the shift, during change over and during splicing?
                                 </label>
-                                <select
-                                    name="pickAndPlaceManagement.question27"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question27"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question27"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 28 */}
@@ -816,16 +1068,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     28. Check whether the maintenance of m/c is done?
                                 </label>
-                                <select
-                                    name="pickAndPlaceManagement.question28"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question28"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question28"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 29 */}
@@ -833,16 +1099,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     29. Whether the MSD components are managed and filled in as required and are used within the specified time?
                                 </label>
-                                <select
-                                    name="pickAndPlaceManagement.question29"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question29"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question29"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 30 */}
@@ -850,16 +1130,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     30. Program as per running model wrt Controlled Feeder List?
                                 </label>
-                                <select
-                                    name="pickAndPlaceManagement.question30"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question30"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="pickAndPlaceManagement.question30"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
                         </>
                     )}
