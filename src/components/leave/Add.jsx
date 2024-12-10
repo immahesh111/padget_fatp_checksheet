@@ -73,16 +73,16 @@ const Add = () => {
     const [showPickAndPlaceManagement, setShowPickAndPlaceManagement] = useState(false);
     const navigate = useNavigate();
 
-  
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-    
+
         console.log(`Input Name: ${name}, Input Value: ${value}`);  // Debugging log
-    
+
         if (name.includes('.')) {
             const [subdivision, key, subKey] = name.split('.');
-    
+
             if (subKey) {
                 setLeave((prevState) => ({
                     ...prevState,
@@ -182,16 +182,30 @@ const Add = () => {
                                 <label className='block text-sm font-medium text-gray-700'>
                                     1. Whether Component reels as per feeder list and module based system?
                                 </label>
-                                <select
-                                    name="rawMaterialStorage.question1"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question1"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question1"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 2 */}
