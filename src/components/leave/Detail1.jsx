@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Detail = () => {
+const Detail1 = () => {
     const { id } = useParams();
     const [leave, setLeave] = useState(null);
     const navigate = useNavigate();
@@ -128,4 +128,4 @@ const Detail = () => {
     );
 };
 
-export default Detail;
+export default Detail1;
