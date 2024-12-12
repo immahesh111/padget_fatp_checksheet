@@ -4,7 +4,7 @@ import { columns, LeaveButtons } from '../../utils/LeaveHelper1'
 import DataTable from 'react-data-table-component'
 import axios from 'axios'
 
-const Table = () => {
+const Table1 = () => {
     const [leaves, setLeaves] = useState(null)
     const [filteredLeaves, setFilteredLeaves] = useState(null)
 
@@ -93,4 +93,4 @@ const Table = () => {
     );
 };
 
-export default Table
+export default Table1

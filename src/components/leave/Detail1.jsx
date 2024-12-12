@@ -38,7 +38,7 @@ const Detail = () => {
             });
 
             if (response.data.success) {
-                navigate('/admin-dashboard/leaves');
+                navigate('/admin-dashboard/leaves1');
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
