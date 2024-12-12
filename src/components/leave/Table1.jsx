@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaLessThanEqual } from 'react-icons/fa'
-import { columns, LeaveButtons } from '../../utils/LeaveHelper'
+import { columns, LeaveButtons } from '../../utils/LeaveHelper1'
 import DataTable from 'react-data-table-component'
 import axios from 'axios'
 
