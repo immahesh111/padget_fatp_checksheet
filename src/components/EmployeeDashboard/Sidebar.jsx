@@ -54,7 +54,22 @@ const Sidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaBuilding className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>CheckSheet Fill</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Stencil Checksheet</span>
+            </>
+          )}
+        </NavLink>
+
+        <NavLink
+          to={`/employee-dashboard/leaves1/${user._id}`}
+          className={({ isActive }) => `
+    ${isActive ? "bg-white" : ""} 
+    flex items-center space-x-4 block py-2.5 px-4 rounded
+  `}
+        >
+          {({ isActive }) => (
+            <>
+              <FaBuilding className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>FA Checksheet</span>
             </>
           )}
         </NavLink>
