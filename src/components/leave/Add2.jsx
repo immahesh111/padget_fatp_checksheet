@@ -137,7 +137,6 @@ const Add2 = () => {
                                             onChange={handleChange}
                                             className="form-radio h-4 w-4 text-blue-600"
                                             required
-                                            checked={formData['rawMaterialStorage.question1'] === 'Yes'}
                                         />
                                         <span className="ml-2 text-gray-700">Yes</span>
                                     </label>
@@ -169,7 +168,6 @@ const Add2 = () => {
                                             onChange={handleChange}
                                             className="form-radio h-4 w-4 text-blue-600"
                                             required
-                                            checked={formData['rawMaterialStorage.question2'] === 'Yes'}
                                         />
                                         <span className="ml-2 text-gray-700">Yes</span>
                                     </label>
@@ -190,7 +188,7 @@ const Add2 = () => {
                             {/* Question 3 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    3. Check the Air supply of machine (0.4 to 0.6 mpa)?
+                                    3. Check the Air supply of machine (0.4 too 0.6 mpa)?
                                 </label>
                                 <div className="mt-2">
                                     <label className="inline-flex items-center mr-4">
@@ -201,7 +199,6 @@ const Add2 = () => {
                                             onChange={handleChange}
                                             className="form-radio h-4 w-4 text-blue-600"
                                             required
-                                            checked={formData['rawMaterialStorage.question3'] === 'Yes'}
                                         />
                                         <span className="ml-2 text-gray-700">Yes</span>
                                     </label>
@@ -222,7 +219,7 @@ const Add2 = () => {
                             {/* Question 4 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    4. Clean the water from Mini support cooler?
+                                    4.Clean the water from Mini support cooler?
                                 </label>
                                 <div className="mt-2">
                                     <label className="inline-flex items-center mr-4">
@@ -233,7 +230,6 @@ const Add2 = () => {
                                             onChange={handleChange}
                                             className="form-radio h-4 w-4 text-blue-600"
                                             required
-                                            checked={formData['rawMaterialStorage.question4'] === 'Yes'}
                                         />
                                         <span className="ml-2 text-gray-700">Yes</span>
                                     </label>
