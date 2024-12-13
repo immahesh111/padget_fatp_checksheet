@@ -88,25 +88,25 @@ const Detail1 = () => {
 
                                     {/* Question 1 */}
                                     <div className="flex justify-between mb-2">
-                                        <span>1. Whether Component reels as per feeder list and module based system?</span>
+                                        <span>1. Clean the Outer body of machine?</span>
                                         <span>{leave.rawMaterialStorage.question1 || 'Not answered'}</span>
                                     </div>
 
                                     {/* Question 2 */}
                                     <div className="flex justify-between mb-2">
-                                        <span>2. Whether component reels are in good condition?</span>
+                                        <span>2. Check the Emergency switch. should be tight properly?</span>
                                         <span>{leave.rawMaterialStorage.question2 || 'Not answered'}</span>
                                     </div>
 
                                     {/* Question 3 */}
                                     <div className="flex justify-between mb-2">
-                                        <span>3. Whether component MBB puncher(MSL)?</span>
+                                        <span>3. Check the Air supply of machine (0.4 too 0.6 mpa)?</span>
                                         <span>{leave.rawMaterialStorage.question3 || 'Not answered'}</span>
                                     </div>
 
                                     {/* Question 4 */}
                                     <div className="flex justify-between mb-2">
-                                        <span>4. Loose material should have MSL tracking label during component open from packet?</span>
+                                        <span>4.Clean the water from Mini support cooler?</span>
                                         <span>{leave.rawMaterialStorage.question4 || 'Not answered'}</span>
                                     </div>
                                 </div>
