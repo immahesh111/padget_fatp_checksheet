@@ -66,7 +66,7 @@ const AdminSidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Process_Stencil</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Stencil Sheet Approval</span>
             </>
           )}
         </NavLink>
@@ -81,7 +81,7 @@ const AdminSidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Process_FA_Sheet</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Printer Machine Approval</span>
             </>
           )}
         </NavLink>
