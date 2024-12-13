@@ -80,7 +80,7 @@ const Add2 = () => {
 
     return (
         <div className='max-w-4xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
-            <h2 className='text-2xl font-bold mb-6'>Leave Application Form for ProcessAudit_02</h2>
+            <h2 className='text-2xl font-bold mb-6'>Printer Machine</h2>
 
             <form onSubmit={handleSubmit}>
                 <div className='flex flex-col space-y-4'>
@@ -118,76 +118,133 @@ const Add2 = () => {
 
                     {/* Raw Material Storage Subdivision */}
                     <h3 className='text-lg font-bold cursor-pointer mt-4 p-2 border border-teal-500 bg-teal-100 rounded' onClick={() => setShowRawMaterialStorage(!showRawMaterialStorage)}>
-                        Raw Material Storage
+                        Printer Machine
                     </h3>
+
                     {showRawMaterialStorage && (
                         <>
                             {/* Question 1 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    1. Whether Component reels as per feeder list and module based system?
+                                    1. Clean the Outer body of machine?
                                 </label>
-                                <select
-                                    name="rawMaterialStorage.question1"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question1"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question1"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 2 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    2. Whether component reels are in good condition?
+                                    2. Check the Emergency switch. should be tight properly?
                                 </label>
-                                <select
-                                    name="rawMaterialStorage.question2"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question2"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question2"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 3 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    3. Whether component MBB puncher(MSL)?
+                                    3. Check the Air supply of machine (0.4 too 0.6 mpa)?
                                 </label>
-                                <select
-                                    name="rawMaterialStorage.question3"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question3"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question3"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
 
                             {/* Question 4 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    4. Loose material should have MSL tracking label during component open from packet?
+                                    4.Clean the water from Mini support cooler?
                                 </label>
-                                <select
-                                    name="rawMaterialStorage.question4"
-                                    onChange={handleChange}
-                                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                                    required
-                                >
-                                    <option value="">Select Yes/No</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                                <div className="mt-2">
+                                    <label className="inline-flex items-center mr-4">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question4"
+                                            value="Yes"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">Yes</span>
+                                    </label>
+                                    <label className="inline-flex items-center">
+                                        <input
+                                            type="radio"
+                                            name="rawMaterialStorage.question4"
+                                            value="No"
+                                            onChange={handleChange}
+                                            className="form-radio h-4 w-4 text-blue-600"
+                                            required
+                                        />
+                                        <span className="ml-2 text-gray-700">No</span>
+                                    </label>
+                                </div>
                             </div>
                         </>
                     )}
