@@ -81,7 +81,22 @@ const AdminSidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Printer Machine Approval</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Printer Approval</span>
+            </>
+          )}
+        </NavLink>
+
+        <NavLink
+          to="/admin-dashboard/leaves1"
+          className={({ isActive }) => `
+    ${isActive ? "bg-white" : ""} 
+    flex items-center space-x-4 block py-2.5 px-4 rounded
+  `}
+        >
+          {({ isActive }) => (
+            <>
+              <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>SPI Approval</span>
             </>
           )}
         </NavLink>

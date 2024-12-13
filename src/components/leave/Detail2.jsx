@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Detail1 = () => {
+const Detail2 = () => {
     const { id } = useParams();
     const [leave, setLeave] = useState(null);
     const navigate = useNavigate();
@@ -10,7 +10,7 @@ const Detail1 = () => {
     useEffect(() => {
         const fetchLeave = async () => {
             try {
-                const response = await axios.get(`https://checksheet-api.onrender.com/api/leave1/detail/${id}`, {
+                const response = await axios.get(`https://checksheet-api.onrender.com/api/leave2/detail/${id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
@@ -31,14 +31,14 @@ const Detail1 = () => {
     }, [id]);
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`https://checksheet-api.onrender.com/api/leave1/${id}`, { status }, {
+            const response = await axios.put(`https://checksheet-api.onrender.com/api/leave2/${id}`, { status }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
 
             if (response.data.success) {
-                navigate('/admin-dashboard/leaves1');
+                navigate('/admin-dashboard/leaves2');
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
@@ -88,25 +88,25 @@ const Detail1 = () => {
 
                                     {/* Question 1 */}
                                     <div className="flex justify-between mb-2">
-                                        <span>1. Whether Component reels as per feeder list and module based system?</span>
+                                        <span>1. Clean the Outer body of machine</span>
                                         <span>{leave.rawMaterialStorage.question1 || 'Not answered'}</span>
                                     </div>
 
                                     {/* Question 2 */}
                                     <div className="flex justify-between mb-2">
-                                        <span>2. Whether component reels are in good condition?</span>
+                                        <span>2. Check the Air Supply of machine (0.5 to 0.8mpa)</span>
                                         <span>{leave.rawMaterialStorage.question2 || 'Not answered'}</span>
                                     </div>
 
                                     {/* Question 3 */}
                                     <div className="flex justify-between mb-2">
-                                        <span>3. Whether component MBB puncher(MSL)?</span>
+                                        <span>3. Check Abnormal Noise/ Vibration while Operation</span>
                                         <span>{leave.rawMaterialStorage.question3 || 'Not answered'}</span>
                                     </div>
 
                                     {/* Question 4 */}
                                     <div className="flex justify-between mb-2">
-                                        <span>4. Loose material should have MSL tracking label during component open from packet?</span>
+                                        <span>4. Check Obstruction during PCB Transfer </span>
                                         <span>{leave.rawMaterialStorage.question4 || 'Not answered'}</span>
                                     </div>
                                 </div>
@@ -128,4 +128,4 @@ const Detail1 = () => {
     );
 };
 
-export default Detail1;
+export default Detail2;

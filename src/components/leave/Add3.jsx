@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 import { useNavigate } from 'react-router-dom';
 
-const Add2 = () => {
+const Add3 = () => {
     const { user } = useAuth();
 
     const [leave, setLeave] = useState({
@@ -63,14 +63,14 @@ const Add2 = () => {
         console.log("Submitting leave data:", leave); // Log leave data before submission
 
         try {
-            const response = await axios.post(`https://checksheet-api.onrender.com/api/leave1/add`, leave, {
+            const response = await axios.post(`https://checksheet-api.onrender.com/api/leave2/add`, leave, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
 
             if (response.data.success) {
-                navigate(`/employee-dashboard/leaves1/${user._id}`);
+                navigate(`/employee-dashboard/leaves2/${user._id}`);
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
@@ -81,7 +81,7 @@ const Add2 = () => {
 
     return (
         <div className='max-w-4xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
-            <h2 className='text-2xl font-bold mb-6'>Printer Machine</h2>
+            <h2 className='text-2xl font-bold mb-6'>SPI Machine</h2>
 
             <form onSubmit={handleSubmit}>
                 <div className='flex flex-col space-y-4'>
@@ -119,7 +119,7 @@ const Add2 = () => {
 
                     {/* Raw Material Storage Subdivision */}
                     <h3 className='text-lg font-bold cursor-pointer mt-4 p-2 border border-teal-500 bg-teal-100 rounded' onClick={() => setShowRawMaterialStorage(!showRawMaterialStorage)}>
-                        Printer Machine
+                        SPI Machine
                     </h3>
 
                     {showRawMaterialStorage && (
@@ -127,7 +127,7 @@ const Add2 = () => {
                             {/* Question 1 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    1. Clean the Outer body of machine?
+                                 1. Clean the Outer body of machine
                                 </label>
                                 <div className="mt-2">
                                     <label className="inline-flex items-center mr-4">
@@ -158,7 +158,7 @@ const Add2 = () => {
                             {/* Question 2 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    2. Check the Emergency switch. should be tight properly?
+                                2. Check the Air Supply of machine (0.5 to 0.8mpa)
                                 </label>
                                 <div className="mt-2">
                                     <label className="inline-flex items-center mr-4">
@@ -189,7 +189,7 @@ const Add2 = () => {
                             {/* Question 3 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    3. Check the Air supply of machine (0.4 too 0.6 mpa)?
+                                3. Check Abnormal Noise/ Vibration while Operation
                                 </label>
                                 <div className="mt-2">
                                     <label className="inline-flex items-center mr-4">
@@ -220,7 +220,7 @@ const Add2 = () => {
                             {/* Question 4 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    4.Clean the water from Mini support cooler?
+                                4. Check Obstruction during PCB Transfer
                                 </label>
                                 <div className="mt-2">
                                     <label className="inline-flex items-center mr-4">
@@ -263,4 +263,4 @@ const Add2 = () => {
     );
 };
 
-export default Add2;
+export default Add3;
