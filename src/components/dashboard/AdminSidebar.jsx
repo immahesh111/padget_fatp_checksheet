@@ -66,7 +66,7 @@ const AdminSidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>LDA Audio Tester</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Audio Tester Approval</span>
             </>
           )}
         </NavLink>
@@ -81,7 +81,7 @@ const AdminSidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Printer Approval</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Camera Tester Approvval</span>
             </>
           )}
         </NavLink>

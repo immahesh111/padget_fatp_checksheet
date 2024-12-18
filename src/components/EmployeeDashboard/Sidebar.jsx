@@ -54,7 +54,7 @@ const Sidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaBuilding className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Stencil Checksheet</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>LDA Audio Tester</span>
             </>
           )}
         </NavLink>
@@ -69,7 +69,7 @@ const Sidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaBuilding className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Printer Machine Checksheet</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Camera Tester</span>
             </>
           )}
         </NavLink>
