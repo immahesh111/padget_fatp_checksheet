@@ -37,7 +37,7 @@ export const columns = [
     {
         name: "Date", // Added Date column
         selector: (row) => formatDate(row.date), // Format the date here
-        width: "80px",
+        width: "120px",
     },
     {
         name: "Time", // Added Time column
