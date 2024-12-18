@@ -180,7 +180,7 @@ const Add = () => {
                             {/* Question 1 */}
                             <div>
                                 <label className='block text-sm font-medium text-gray-700'>
-                                    1. Whether Component reels as per feeder list and module based system?
+                                    1. Whether Component reels as per Feeder list and module based system?
                                 </label>
                                 <div className="mt-2">
                                     <label className="inline-flex items-center mr-4">
