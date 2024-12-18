@@ -1,6 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import html2pdf from "html2pdf.js"
 
+import { useNavigate } from "react-router-dom";
+import html2pdf from "html2pdf.js";
+
+// Function to format the date
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toISOString().split('T')[0]; // Returns date in YYYY-MM-DD format
+};
+
+// Function to format the time
+const formatTime = (dateString) => {
+    const date = new Date(dateString);
+    return date.toTimeString().split(' ')[0]; // Returns time in HH:MM:SS format
+};
+
 export const columns = [
     {
         name: "S No",
@@ -17,20 +32,19 @@ export const columns = [
         selector: (row) => row.name,
         width: "120px",
     },
-
     {
         name: "Department", // Added Department column
         selector: (row) => row.department,
         width: "80px",
     },
     {
-        name: "Date", // Added Day column
-        selector: (row) => formatDate(row.date),
+        name: "Date", // Added Date column
+        selector: (row) => formatDate(row.date), // Format the date here
         width: "150px",
     },
     {
-        name: "Time", // Added Day column
-        selector: (row) => formatTime(row.time),
+        name: "Time", // Added Time column
+        selector: (row) => formatTime(row.time), // Format the time here
         width: "80px",
     },
     {
