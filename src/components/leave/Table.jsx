@@ -28,9 +28,9 @@ const Table = () => {
                         name: leave.employeeId.userId.name,
                         leaveType: leave.leaveType,
                         department: leave.employeeId.department.dep_name,
-                        days:
-                            new Date(leave.endDate).getDate() -
-                            new Date(leave.startDate).getDate(),
+                        date:leave.date,
+                        time:leave.updatedAt,
+                        shift:leave.shift,
                         status: leave.status,
                         action: <LeaveButtons _id={leave._id} />,
                     }
