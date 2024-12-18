@@ -15,7 +15,7 @@ const Detail1 = () => {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
                 });
-        
+
                 if (response.data.success) {
                     console.log("Fetched Leave Data:", response.data.leave); // Log fetched data
                     setLeave(response.data.leave);
@@ -84,34 +84,90 @@ const Detail1 = () => {
                             {/* Display Raw Material Storage Questions and Answers */}
                             {leave.rawMaterialStorage && (
                                 <div className="border-t border-b pt-4 pb-4">
-                                    <h3 className="text-lg font-bold mb-4">Printer Machine Questions</h3>
+                                    <h3 className="text-lg font-bold mb-4">Raw Material Storage Questions</h3>
+                                    <table className="min-w-full border-collapse border border-gray-300">
+                                        <thead>
+                                            <tr>
+                                                <th className="border border-gray-300 p-2 text-center">Class</th>
+                                                <th className="border border-gray-300 p-2 text-center">Assembly/Part</th>
+                                                <th className="border border-gray-300 p-2 text-center">Std Condition</th>
+                                                <th className="border border-gray-300 p-2 text-center">Check Method</th>
+                                                <th className="border border-gray-300 p-2 text-center">Check</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {/* Question 1 */}
+                                            <tr>
+                                                <td className="border border-gray-300 p-2 text-center">Cleaning</td>
+                                                <td className="border border-gray-300 p-2 text-center">Camera ,Cylinder and fixture</td>
+                                                <td className="border border-gray-300 p-2 text-center">No Dirt</td>
+                                                <td className="border border-gray-300 p-2 text-center">Visual</td>
+                                                <td className="border border-gray-300 p-2 text-center">
+                                                    {leave.rawMaterialStorage.question1 || 'Not answered'}
+                                                </td>
+                                            </tr>
 
-                                    {/* Question 1 */}
-                                    <div className="flex justify-between mb-2">
-                                        <span>1. Clean the Outer body of machine?</span>
-                                        <span>{leave.rawMaterialStorage.question1 || 'Not answered'}</span>
-                                    </div>
+                                            {/* Question 2 */}
+                                            <tr>
+                                                <td className="border border-gray-300 p-2 text-center">Change</td>
+                                                <td className="border border-gray-300 p=2 text-center">Check the Earth (Grounding) cable</td>
+                                                <td className="border border-gray=300 p=2 text-center">No Damage</td>
+                                                <td className="border border-gray=300 p=2 text-center">Visual</td>
+                                                <td className="border border-gray=300 p=2 text-center">
+                                                    {leave.rawMaterialStorage.question2 || 'Not answered'}
+                                                </td>
+                                            </tr>
 
-                                    {/* Question 2 */}
-                                    <div className="flex justify-between mb-2">
-                                        <span>2. Check the Emergency switch. should be tight properly?</span>
-                                        <span>{leave.rawMaterialStorage.question2 || 'Not answered'}</span>
-                                    </div>
+                                            {/* Question 3 */}
+                                            <tr>
+                                                <td className="border border-gray=300 p=2 text-center">Change</td>
+                                                <td className="border border-gray=300 p=2 text-center">Ensure the fixture should not have any misalignment and no dust particles</td>
+                                                <td className="border border-gray=300 p=2 text-center">Firm Contact</td>
+                                                <td className="border border-gray=300 p=2 text-center">Lock</td>
+                                                <td className="border border-gray=300 p=2 text-center">
+                                                    {leave.rawMaterialStorage.question3 || 'Not answered'}
+                                                </td>
+                                            </tr>
 
-                                    {/* Question 3 */}
-                                    <div className="flex justify-between mb-2">
-                                        <span>3. Check the Air supply of machine (0.4 too 0.6 mpa)?</span>
-                                        <span>{leave.rawMaterialStorage.question3 || 'Not answered'}</span>
-                                    </div>
+                                            {/* Question 4 */}
+                                            <tr>
+                                                <td className="border border-gray=300 p=2 text-center">Check/ Change</td>
+                                                <td className="border border-gray=300 p=2 text-center">Check LUX value</td>
+                                                <td className="border border-gray=300 p=2 text-center">No abnormalities</td>
+                                                <td className="border border-gray=300 p=2 text-center">Visual</td>
+                                                <td className="border border-gray=300 p=2 text-center">
+                                                    {leave.rawMaterialStorage.question4 || 'Not answered'}
+                                                </td>
+                                            </tr>
 
-                                    {/* Question 4 */}
-                                    <div className="flex justify-between mb-2">
-                                        <span>4.Clean the water from Mini support cooler?</span>
-                                        <span>{leave.rawMaterialStorage.question4 || 'Not answered'}</span>
-                                    </div>
+                                            {/* Question 4 */}
+                                            <tr>
+                                                <td className="border border-gray=300 p=2 text-center">Check/ Change</td>
+                                                <td className="border border-gray=300 p=2 text-center">Check the fixture position and device seating properly without movement</td>
+                                                <td className="border border-gray=300 p=2 text-center">No abnormalities</td>
+                                                <td className="border border-gray=300 p=2 text-center">Visual</td>
+                                                <td className="border border-gray=300 p=2 text-center">
+                                                    {leave.rawMaterialStorage.question5 || 'Not answered'}
+                                                </td>
+                                            </tr>
+
+                                            {/* Question 5 */}
+                                            <tr>
+                                                <td className="border border-gray=300 p=2 text-center">Check</td>
+                                                <td className="border border-gray=300 p=2 text-center">Check the correct script selected according to model requirements</td>
+                                                <td className="border border-gray=300 p=2 text-center">No abnormalities</td>
+                                                <td className="border border-gray=300 p=2 text-center">Visual</td>
+                                                <td className="border border-gray=300 p=2 text-center">
+                                                    {leave.rawMaterialStorage.question6 || 'Not answered'}
+                                                </td>
+                                            </tr>
+
+                                            
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             )}
-
                         </div>
 
                         {/* Right Column - Empty or Additional Details */}

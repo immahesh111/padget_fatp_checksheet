@@ -73,22 +73,77 @@ export const LeaveButtons = ({ row }) => {
             // Create a new HTML element to render the leave details
             const element = document.createElement('div');
             element.innerHTML = `
-                 <h1 style="text-align: center;font-weight: bold;">Check Sheet Details Details</h1>
-    <p><strong>Employee ID:</strong> ${row.employeeId}</p>
-    <p><strong>Name:</strong> ${row.name}</p>
-    <p><strong>Department:</strong> ${row.department}</p>
-    <p><strong>Status:</strong> ${leaveDetails.status}</p>
-    <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-          
-   <h2 style="font-weight: bold; margin-top: 20px;">Raw Material Storage Questions</h2>
-<p>1. Whether Component reels as per feeder list and module based system? <strong>${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</strong></p>
-<p>2. Whether component reels are in good condition? <strong>${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</strong></p>
-<p>3. Whether component MBB puncher (MSL)? <strong>${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</strong></p>
-<p>4. Loose material should have MSL tracking label during component open from packet? <strong>${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</strong></p>
+            <h1 style="text-align: center; font-weight: bold;">Check Sheet Details</h1>
+            <p><strong>Employee ID:</strong> ${row.employeeId}</p>
+            <p><strong>Name:</strong> ${row.name}</p>
+            <p><strong>Department:</strong> ${row.department}</p>
+            <p><strong>Status:</strong> ${leaveDetails.status}</p>
+            <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
+            
+            <h2 style="font-weight: bold; margin-top: 20px;">Raw Material Storage Questions</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #000; padding: 8px; text-align: center;">Class</th>
+                        <th style="border: 1px solid #000; padding: 8px; text-align: center;">Assembly/Part</th>
+                        <th style="border: 1px solid #000; padding: 8px; text-align: center;">Std Condition</th>
+                        <th style="border: 1px solid #000; padding: 8px; text-align: center;">Check Method</th>
+                        <th style="border: 1px solid #000; padding: 8px; text-align: center;">Check</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cleaning</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Camera ,Cylinder and fixture</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Dirt</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Earth (Grounding) cable</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Damage</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Ensure the fixture should not have any misalignment and no dust particles</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Firm Contact</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Lock</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
+                    
+                        <!-- Question 4 -->
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check/ Change</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check LUX value</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">No abnormalities</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Visual</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</td>
+                    </tr>
 
-    <!-- Add other management sections as needed -->
-
-            `;
+                    <!-- Question 5 -->
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check/ Change</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the fixture position and device seating properly without movement</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">No abnormalities</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Visual</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</td>
+                    </tr>
+        
+                    <!-- Question 6 -->
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the correct script selected according to model requirements</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">No abnormalities</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Visual</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question6 || 'Not answered'}</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
 
             // Set options for html2pdf
             const options = {
