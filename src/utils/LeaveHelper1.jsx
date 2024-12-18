@@ -1,31 +1,48 @@
 import { useNavigate } from "react-router-dom";
 import html2pdf from "html2pdf.js"
+import { base64Image } from "../assets/base64image";
+
+// Function to format the date
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toISOString().split('T')[0]; // Returns date in YYYY-MM-DD format
+};
+
+// Function to format the time
+const formatTime = (dateString) => {
+    const date = new Date(dateString);
+    return date.toTimeString().split(' ')[0]; // Returns time in HH:MM:SS format
+};
 
 export const columns = [
     {
         name: "S No",
         selector: (row) => row.sno,
-        width: "70px",
+        width: "40px",
     },
     {
         name: "Emp Id",
         selector: (row) => row.employeeId,
-        width: "120px",
+        width: "100px",
     },
     {
         name: "Name",
         selector: (row) => row.name,
-        width: "120px",
+        width: "100px",
     },
-
     {
         name: "Department", // Added Department column
         selector: (row) => row.department,
-        width: "170px",
+        width: "120px",
     },
     {
-        name: "Day", // Added Day column
-        selector: (row) => row.date,
+        name: "Date", // Added Date column
+        selector: (row) => formatDate(row.date), // Format the date here
+        width: "120px",
+    },
+    {
+        name: "Time", // Added Time column
+        selector: (row) => formatTime(row.time), // Format the time here
         width: "80px",
     },
     {
@@ -36,7 +53,7 @@ export const columns = [
     {
         name: "Status",
         selector: (row) => row.status,
-        width: "120px",
+        width: "100px",
     },
     {
         name: "Action",
@@ -73,12 +90,14 @@ export const LeaveButtons = ({ row }) => {
             // Create a new HTML element to render the leave details
             const element = document.createElement('div');
             element.innerHTML = `
+            <img src="${base64Image}" alt="Description of Image" style="display: block; margin: 0 auto; width: 150px; height: auto;" />
             <h1 style="text-align: center; font-weight: bold;">Check Sheet Details</h1>
             <p><strong>Employee ID:</strong> ${row.employeeId}</p>
             <p><strong>Name:</strong> ${row.name}</p>
             <p><strong>Department:</strong> ${row.department}</p>
             <p><strong>Status:</strong> ${leaveDetails.status}</p>
-            <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
+             <p><strong>Date:</strong> ${formatDate(row.date)}</p>
+            <p><strong>Time:</strong> ${formatTime(row.time)}</p>
             
             <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE CHECKLIST CAMERA TESTER</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">

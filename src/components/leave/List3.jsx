@@ -81,7 +81,7 @@ const List3 = () => {
                             {/* Display Day */}
                             <td className='px-6 py-3'>{formatDate(leave.date) || 'Not specified'}</td> 
                             {/* Display Time */}
-                            <td className='px-6 py-3'>{formatTime(leave.date) || 'Not specified'}</td> 
+                            <td className='px-6 py-3'>{formatTime(leave.updatedAt) || 'Not specified'}</td> 
                             <td className='px-6 py-3'>{leave.shift || 'Not specified'}</td> 
                             <td className='px-6 py-3'>{leave.status}</td> 
 
