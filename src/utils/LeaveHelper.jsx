@@ -80,70 +80,67 @@ export const LeaveButtons = ({ row }) => {
     <p><strong>Status:</strong> ${leaveDetails.status}</p>
     <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
           
-   <h2 style="font-weight: bold; margin-top: 20px;">Raw Material Storage Questions</h2>
-<p>1. Whether Component reels as per feeder list and module based system? <strong>${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</strong></p>
-<p>2. Whether component reels are in good condition? <strong>${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</strong></p>
-<p>3. Whether component MBB puncher (MSL)? <strong>${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</strong></p>
-<p>4. Loose material should have MSL tracking label during component open from packet? <strong>${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</strong></p>
+   <Document>
+        <Page size="A4" style={styles.container}>
+            <Text style={styles.title}>Raw Material Storage Questions</Text>
+            <View style={styles.table}>
+                {/* Table Header */}
+                <View style={styles.tableRow}>
+                    <Text style={styles.tableCell}>Class</Text>
+                    <Text style={styles.tableCell}>Assembly/Part</Text>
+                    <Text style={styles.tableCell}>Std Condition</Text>
+                    <Text style={styles.tableCell}>Check Method</Text>
+                    <Text style={styles.tableCell}>Check</Text>
+                </View>
 
-<h2 style="font-weight: bold; margin-top: 20px;">Solder Paste Management Questions</h2>
-<p>5. Is correct solder paste used (brand/model)? <strong>${leaveDetails.solderPasteManagement?.question5 || 'Not answered'}</strong></p>
-<p>6. Solder paste/glue storage temperature (0–10°C)? <strong>${leaveDetails.solderPasteManagement?.question6 || 'Not answered'}</strong></p>
-<p>7. Check solder paste expiry date? <strong>${leaveDetails.solderPasteManagement?.question7 ? new Date(leaveDetails.solderPasteManagement.question7).toLocaleDateString() : 'Not answered'}</strong></p>
-<p>8. Check solder paste thawing time? <strong>${leaveDetails.solderPasteManagement?.question8 || 'Not answered'}</strong></p>
-<p>9. Is the secondary use of solder paste used within 12 hours of the specific time? <strong>${leaveDetails.solderPasteManagement?.question9 || 'Not answered'}</strong></p>
-<p>10. The solder paste consumed as per FIFO? <strong>${leaveDetails.solderPasteManagement?.question10 || 'Not answered'}</strong></p>
+                {/* Question 1 */}
+                <View style={styles.tableRow}>
+                    <Text style={styles.tableCell}>Cleaning</Text>
+                    <Text style={styles.tableCell}>Cylinder, SPK and mic</Text>
+                    <Text style={styles.tableCell}>No Dirt</Text>
+                    <Text style={styles.tableCell}>Visual</Text>
+                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</Text>
+                </View>
 
-    <h2 style="font-weight: bold; margin-top: 20px;">Loader Management Questions</h2>
-<p>11. Is PCB loading direction correct? <strong>${leaveDetails.loaderManagement?.question12 || 'Not answered'}</strong></p>
-<p>12. Is PCB pallet at the front of magazine? <strong>${leaveDetails.loaderManagement?.question13 || 'Not answered'}</strong></p>
-<p>13. PCB panel max 50 no. should be in a magazine? <strong>${leaveDetails.loaderManagement?.question14 || 'Not answered'}</strong></p>
-<p>14. Whether each pallet is loaded in each magazine slot? <strong>${leaveDetails.loaderManagement?.question15 || 'Not answered'}</strong></p>
-<p>15. Whether push position is in centre of PCB Pallet? <strong>${leaveDetails.loaderManagement?.question16 || 'Not answered'}</strong></p>
+                {/* Question 2 */}
+                <View style={styles.tableRow}>
+                    <Text style={styles.tableCell}>Change</Text>
+                    <Text style={styles.tableCell}>Check the Earth (Grounding) cable</Text>
+                    <Text style={styles.tableCell}>No Damage</Text>
+                    <Text style={styles.tableCell}>Visual</Text>
+                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</Text>
+                </View>
 
-<h2 style="font-weight: bold; margin-top: 20px;">GKG Printer Management Questions</h2>
-<p>16. Stencil No: <strong>${leaveDetails.gkgPrinterManagement?.question17_stencilNo || 'Not answered'}</strong></p>
-<p>17. TOP: <strong>${leaveDetails.gkgPrinterManagement?.question17_top || 'Not answered'}</strong></p>
-<p>18. BOTTOM: <strong>${leaveDetails.gkgPrinterManagement?.question17_bottom || 'Not answered'}</strong></p>
-<p>19. Is stencil cleaning and tension checklist updated? <strong>${leaveDetails.gkgPrinterManagement?.question18 || 'Not answered'}</strong></p>
+                {/* Question 3 */}
+                <View style={styles.tableRow}>
+                    <Text style={styles.tableCell}>Change</Text>
+                    <Text style={styles.tableCell}>Ensure the fixture should not have any misalignment and no dust particles</Text>
+                    <Text style={styles.tableCell}>Firm Contact</Text>
+                    <Text style={styles.tableCell}>Lock</Text>
+                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</Text>
+                </View>
 
-<!-- Printing Parameters -->
-<h4 style="font-weight: bold; margin-top: 60px;">Printing Parameters</h4>
-<h5><strong>Squeege Pressure</strong></h5>
-<div style="margin-left: 20px;">
-    <p>Print Speed: <strong>${leaveDetails.gkgPrinterManagement?.question19_printSpeed || 'Not answered'}</strong></p>
-    <p>Print Gap: <strong>${leaveDetails.gkgPrinterManagement?.question19_printGap || 'Not answered'}</strong></p>
-    <p>Clean Rate: <strong>${leaveDetails.gkgPrinterManagement?.question19_cleanRate || 'Not answered'}</strong></p>
-    <p>Clean Mode: <strong>${leaveDetails.gkgPrinterManagement?.question19_cleanMode || 'Not answered'}</strong></p>
-</div>
+                {/* Question 4 */}
+                <View style={styles.tableRow}>
+                    <Text style={styles.tableCell}>Check/ Change</Text>
+                    <Text style={styles.tableCell}>Check the fixture position and device seating properly without movement</Text>
+                    <Text style={styles.tableCell}>No abnormalities</Text>
+                    <Text style={styles.tableCell}>Visual</Text>
+                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</Text>
+                </View>
 
-    <h2 style="font-weight: bold; margin-top: 20px;">SPI Management Questions</h2>
-    <div style="margin-left: 20px;">
-        <p>21. SPI m/c program name matches the actual product model? ${leaveDetails.spiManagement?.question21 || 'Not answered'}</p>
-        <p>22. Whether SPI m/c detects the defects? ${leaveDetails.spiManagement?.question22 || 'Not answered'}</p>
+                {/* Question 5 */}
+                <View style={styles.tableRow}>
+                    <Text style={styles.tableCell}>Check</Text>
+                    <Text style={styles.tableCell}>Check the correct script selected according to model requirements</Text>
+                    <Text style={styles.tableCell}>No abnormalities</Text>
+                    <Text style={styles.tableCell}>Visual</Text>
+                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</Text>
+                </View>
 
-        <!-- Volume Section -->
-        <h4 style="font-weight: bold;">Volume</h4>
-        <div style="display: flex; justify-content: space-between;">
-            <div><strong>Minimum Volume:</strong> ${leaveDetails.spiManagement.volumeStringMinimum || 'Not answered'}</div>
-            <div><strong>Highest Volume:</strong> ${leaveDetails.spiManagement.volumeStringHighest || 'Not answered'}</div>
-        </div>
-
-        <!-- Area Section -->
-        <h4 style="font-weight: bold; ">Area</h4>
-        <div style="display: flex; justify-content: space-between;">
-            <div><strong>Minimum Area:</strong> ${leaveDetails.spiManagement.areaStringMinimum || 'Not answered'}</div>
-            <div><strong>Highest Area:</strong> ${leaveDetails.spiManagement.areaStringHighest || 'Not answered'}</div>
-        </div>
-
-        <!-- Height Section -->
-        <h4 style="font-weight: bold;">Height</h4>
-        <div style="display: flex; justify-content: space-between; margin-bottom-10px;">
-            <div><strong>Minimum Height:</strong> ${leaveDetails.spiManagement.heightStringMinimum || 'Not answered'}</div>
-            <div><strong>Highest Height:</strong>${leaveDetails.spiManagement.heightStringHighest || 'Not answered'}</div>
-        </div>
-
-    </div>
+            </View>
+        </Page>
+    </Document>
 
     <!-- Add other management sections as needed -->
 
