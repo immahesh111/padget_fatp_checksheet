@@ -17,27 +17,27 @@ export const columns = [
     {
         name: "S No",
         selector: (row) => row.sno,
-        width: "70px",
+        width: "40px",
     },
     {
         name: "Emp Id",
         selector: (row) => row.employeeId,
-        width: "80px",
+        width: "100px",
     },
     {
         name: "Name",
         selector: (row) => row.name,
-        width: "120px",
+        width: "100px",
     },
     {
         name: "Department", // Added Department column
         selector: (row) => row.department,
-        width: "80px",
+        width: "120px",
     },
     {
         name: "Date", // Added Date column
         selector: (row) => formatDate(row.date), // Format the date here
-        width: "150px",
+        width: "80px",
     },
     {
         name: "Time", // Added Time column
