@@ -11,7 +11,7 @@ const Table1 = () => {
 
     const fetchLeaves = async () => {
         try {
-            const response = await axios.get('https://checksheet-api.onrender.com/api/leave1', {
+            const response = await axios.get('https://fatp-api.onrender.com/api/leave1', {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }

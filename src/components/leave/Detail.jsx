@@ -10,7 +10,7 @@ const Detail = () => {
     useEffect(() => {
         const fetchLeave = async () => {
             try {
-                const response = await axios.get(`https://checksheet-api.onrender.com/api/leave/detail/${id}`, {
+                const response = await axios.get(`https://fatp-api.onrender.com/api/leave/detail/${id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
@@ -31,7 +31,7 @@ const Detail = () => {
     }, [id]);
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`https://checksheet-api.onrender.com/api/leave/${id}`, { status }, {
+            const response = await axios.put(`https://fatp-api.onrender.com/api/leave/${id}`, { status }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }

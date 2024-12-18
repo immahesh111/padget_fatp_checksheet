@@ -27,7 +27,7 @@ const Setting = () => {
         } else {
             try{
                 const response = await axios.put(
-                    "https://checksheet-api.onrender.com/api/setting/change-password",
+                    "https://fatp-api.onrender.com/change-password",
                     setting,
                     {
                         headers: {
