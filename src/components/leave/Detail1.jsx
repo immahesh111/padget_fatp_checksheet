@@ -84,7 +84,7 @@ const Detail1 = () => {
                             {/* Display Raw Material Storage Questions and Answers */}
                             {leave.rawMaterialStorage && (
                                 <div className="border-t border-b pt-4 pb-4">
-                                    <h3 className="text-lg font-bold mb-4">Raw Material Storage Questions</h3>
+                                    <h3 className="text-lg font-bold mb-4">DAILY MAINTENANCE CHECKLIST CAMERA TESTER</h3>
                                     <table className="min-w-full border-collapse border border-gray-300">
                                         <thead>
                                             <tr>
@@ -140,7 +140,7 @@ const Detail1 = () => {
                                                 </td>
                                             </tr>
 
-                                            {/* Question 4 */}
+                                            {/* Question 5 */}
                                             <tr>
                                                 <td className="border border-gray=300 p=2 text-center">Check/ Change</td>
                                                 <td className="border border-gray=300 p=2 text-center">Check the fixture position and device seating properly without movement</td>
@@ -151,7 +151,7 @@ const Detail1 = () => {
                                                 </td>
                                             </tr>
 
-                                            {/* Question 5 */}
+                                            {/* Question 6 */}
                                             <tr>
                                                 <td className="border border-gray=300 p=2 text-center">Check</td>
                                                 <td className="border border-gray=300 p=2 text-center">Check the correct script selected according to model requirements</td>

@@ -80,7 +80,7 @@ export const LeaveButtons = ({ row }) => {
             <p><strong>Status:</strong> ${leaveDetails.status}</p>
             <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
             
-            <h2 style="font-weight: bold; margin-top: 20px;">Raw Material Storage Questions</h2>
+            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENENCCE LDA AUDIO TESTER</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
                 <thead>
                     <tr>
