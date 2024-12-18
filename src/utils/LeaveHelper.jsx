@@ -92,7 +92,28 @@ export const LeaveButtons = ({ row }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {/* Other questions */}
+                     <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cleaning</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cylinder, SPK and mic</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Dirt</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Earth (Grounding) cable</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Damage</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Ensure the fixture should not have any misalignment and no dust particles</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Firm Contact</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Lock</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
                     <!-- Question 4 -->
                     <tr>
                         <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check/ Change</td>
