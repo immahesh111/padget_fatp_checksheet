@@ -1,9 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import html2pdf from "html2pdf.js"
 
-import { useNavigate } from "react-router-dom";
-import html2pdf from "html2pdf.js";
-
 // Function to format the date
 const formatDate = (dateString) => {
     const date = new Date(dateString);
