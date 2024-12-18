@@ -81,7 +81,7 @@ const AdminSidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Camera Tester Approvval</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Camera Tester Approval</span>
             </>
           )}
         </NavLink>
