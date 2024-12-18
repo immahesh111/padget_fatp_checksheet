@@ -44,8 +44,10 @@ const List = () => {
 
     // Function to format time
     const formatTime = (dateString) => {
-        const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-        return new Date(dateString).toLocaleTimeString('en-US', options);
+        const date = new Date(dateString);
+        // Extract hours and minutes
+        const options = { hour: '2-digit', minute: '2-digit', hour12: false }; // 24-hour format
+        return date.toLocaleTimeString([], options); // Returns formatted time
     };
 
     return (
@@ -81,9 +83,9 @@ const List = () => {
                             {/* Display Day */}
                             <td className='px-6 py-3'>{formatDate(leave.date) || 'Not specified'}</td> 
                             {/* Display Time */}
-                            <td className='px-6 py-3'>{formatTime(leave.date) || 'Not specified'}</td> 
+                            <td className='px-6 py-3'>{formatTime(leave.updatedAt) || 'Not specified'}</td> 
                             <td className='px-6 py-3'>{leave.shift || 'Not specified'}</td> 
-                            <td className='px-6 py-3'>{leave.status}</td> 
+                            <td className='px-6 py-3'>{leave.status}</td>
 
                         </tr>
                     ))}
