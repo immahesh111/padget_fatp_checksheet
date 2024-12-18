@@ -101,14 +101,14 @@ export const LeaveButtons = ({ row }) => {
             // Create a new HTML element to render the leave details
             const element = document.createElement('div');
             element.innerHTML = `
-            <img src="https://github.com/immahesh111/padget_fatp_checksheet/blob/main/public/Padget.png" alt="Description of Image" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" />
+           <img src="https://raw.githubusercontent.com/immahesh111/padget_fatp_checksheet/main/public/Padget.png" alt="Description of Image" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" />
             <h1 style="text-align: center; font-weight: bold;">Check Sheet Details</h1>
             <p><strong>Employee ID:</strong> ${row.employeeId}</p>
             <p><strong>Name:</strong> ${row.name}</p>
             <p><strong>Department:</strong> ${row.department}</p>
             <p><strong>Status:</strong> ${leaveDetails.status}</p>
-            <p><strong>Date:</strong> ${row.date}</p>
-            <p><strong>Time:</strong> ${row.time}</p>
+            <p><strong>Date:</strong> ${formatDate(row.date)}</p>
+            <p><strong>Time:</strong> ${formatTime(row.time)}</p>
             
             <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENENCCE LDA AUDIO TESTER</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
