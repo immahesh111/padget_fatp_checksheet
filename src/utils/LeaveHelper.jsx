@@ -73,77 +73,62 @@ export const LeaveButtons = ({ row }) => {
             // Create a new HTML element to render the leave details
             const element = document.createElement('div');
             element.innerHTML = `
-                 <h1 style="text-align: center;font-weight: bold;">Check Sheet Details Details</h1>
-    <p><strong>Employee ID:</strong> ${row.employeeId}</p>
-    <p><strong>Name:</strong> ${row.name}</p>
-    <p><strong>Department:</strong> ${row.department}</p>
-    <p><strong>Status:</strong> ${leaveDetails.status}</p>
-    <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-          
-   <Document>
-        <Page size="A4" style={styles.container}>
-            <Text style={styles.title}>Raw Material Storage Questions</Text>
-            <View style={styles.table}>
-                {/* Table Header */}
-                <View style={styles.tableRow}>
-                    <Text style={styles.tableCell}>Class</Text>
-                    <Text style={styles.tableCell}>Assembly/Part</Text>
-                    <Text style={styles.tableCell}>Std Condition</Text>
-                    <Text style={styles.tableCell}>Check Method</Text>
-                    <Text style={styles.tableCell}>Check</Text>
-                </View>
-
-                {/* Question 1 */}
-                <View style={styles.tableRow}>
-                    <Text style={styles.tableCell}>Cleaning</Text>
-                    <Text style={styles.tableCell}>Cylinder, SPK and mic</Text>
-                    <Text style={styles.tableCell}>No Dirt</Text>
-                    <Text style={styles.tableCell}>Visual</Text>
-                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</Text>
-                </View>
-
-                {/* Question 2 */}
-                <View style={styles.tableRow}>
-                    <Text style={styles.tableCell}>Change</Text>
-                    <Text style={styles.tableCell}>Check the Earth (Grounding) cable</Text>
-                    <Text style={styles.tableCell}>No Damage</Text>
-                    <Text style={styles.tableCell}>Visual</Text>
-                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</Text>
-                </View>
-
-                {/* Question 3 */}
-                <View style={styles.tableRow}>
-                    <Text style={styles.tableCell}>Change</Text>
-                    <Text style={styles.tableCell}>Ensure the fixture should not have any misalignment and no dust particles</Text>
-                    <Text style={styles.tableCell}>Firm Contact</Text>
-                    <Text style={styles.tableCell}>Lock</Text>
-                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</Text>
-                </View>
-
-                {/* Question 4 */}
-                <View style={styles.tableRow}>
-                    <Text style={styles.tableCell}>Check/ Change</Text>
-                    <Text style={styles.tableCell}>Check the fixture position and device seating properly without movement</Text>
-                    <Text style={styles.tableCell}>No abnormalities</Text>
-                    <Text style={styles.tableCell}>Visual</Text>
-                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</Text>
-                </View>
-
-                {/* Question 5 */}
-                <View style={styles.tableRow}>
-                    <Text style={styles.tableCell}>Check</Text>
-                    <Text style={styles.tableCell}>Check the correct script selected according to model requirements</Text>
-                    <Text style={styles.tableCell}>No abnormalities</Text>
-                    <Text style={styles.tableCell}>Visual</Text>
-                    <Text style={styles.tableCell}>${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</Text>
-                </View>
-
-            </View>
-        </Page>
-    </Document>
-
-    <!-- Add other management sections as needed -->
-
+                <h1 style="text-align: center; font-weight: bold;">Check Sheet Details</h1>
+                <p><strong>Employee ID:</strong> ${row.employeeId}</p>
+                <p><strong>Name:</strong> ${row.name}</p>
+                <p><strong>Department:</strong> ${row.department}</p>
+                <p><strong>Status:</strong> ${leaveDetails.status}</p>
+                <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
+                
+                <h2 style="font-weight: bold; margin-top: 20px;">Raw Material Storage Questions</h2>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid #000; padding: 8px; text-align: center;">Class</th>
+                            <th style="border: 1px solid #000; padding: 8px; text-align: center;">Assembly/Part</th>
+                            <th style="border: 1px solid #000; padding: 8px; text-align: center;">Std Condition</th>
+                            <th style="border: 1px solid #000; padding: 8px; text-align: center;">Check Method</th>
+                            <th style="border: 1px solid #000; padding: 8px; text-align: center;">Check</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cleaning</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cylinder, SPK and mic</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Dirt</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Earth (Grounding) cable</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Damage</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Ensure the fixture should not have any misalignment and no dust particles</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Firm Contact</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Lock</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check/ Change</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the fixture position and device seating properly without movement</td>
+                            <td style="border: 1px solid #000; padding :8 px ;text - align :center">No abnormalities</td >
+                            <td style = "border :1 px solid #000;padding :8 px;text - align :center" >Visual</ td >
+                            < td style = "border :1 px solid #000;padding :8 px;text - align :center" >${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</ td >
+                        </ tr >
+                        < tr >
+                            < td style = "border :1 px solid #000;padding :8 px;text - align :center" >Check</ td >
+                            < td style = "border :1 px solid #000;padding :8 px;text - align :center" >Check the correct script selected according to model requirements</ td >
+                            < td style = "border :1 px solid #000;padding :8 px;text - align :center" >No abnormalities</ td >
+                            < td style = "border :1 px solid #000;padding :8 px;text - align :center" >Visual</ td >
+                            < td style = "border :1 px solid #000;padding :8 px;text - align :center" >${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</ td >
+                        </ tr >
+                    </ tbody >
+                </ table >
             `;
 
             // Set options for html2pdf
