@@ -25,12 +25,12 @@ export const columns = [
     },
     {
         name: "Date", // Added Day column
-        selector: (row) => row.date,
+        selector: (row) => formatDate(row.date),
         width: "150px",
     },
     {
         name: "Time", // Added Day column
-        selector: (row) => row.time,
+        selector: (row) => formatTime(row.time),
         width: "80px",
     },
     {
@@ -41,7 +41,7 @@ export const columns = [
     {
         name: "Status",
         selector: (row) => row.status,
-        width: "80px",
+        width: "100px",
     },
     {
         name: "Action",
@@ -55,6 +55,18 @@ export const LeaveButtons = ({ row }) => {
 
     const handleView = () => {
         navigate(`/admin-dashboard/leaves/${row._id}`);
+    };
+
+    const formatTime = (dateString) => {
+        const date = new Date(dateString);
+        // Extract hours and minutes
+        const options = { hour: '2-digit', minute: '2-digit', hour12: false }; // 24-hour format
+        return date.toLocaleTimeString([], options); // Returns formatted time
+    };
+
+    const formatDate = (dateString) => {
+        const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+        return new Date(dateString).toLocaleDateString('en-US', options);
     };
 
     const handleExport = async () => {
