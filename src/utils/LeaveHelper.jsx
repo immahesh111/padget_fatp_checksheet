@@ -10,7 +10,7 @@ export const columns = [
     {
         name: "Emp Id",
         selector: (row) => row.employeeId,
-        width: "120px",
+        width: "80px",
     },
     {
         name: "Name",
@@ -21,11 +21,16 @@ export const columns = [
     {
         name: "Department", // Added Department column
         selector: (row) => row.department,
-        width: "170px",
+        width: "80px",
     },
     {
-        name: "Day", // Added Day column
+        name: "Date", // Added Day column
         selector: (row) => row.date,
+        width: "150px",
+    },
+    {
+        name: "Time", // Added Day column
+        selector: (row) => row.time,
         width: "80px",
     },
     {
@@ -36,7 +41,7 @@ export const columns = [
     {
         name: "Status",
         selector: (row) => row.status,
-        width: "120px",
+        width: "80px",
     },
     {
         name: "Action",
