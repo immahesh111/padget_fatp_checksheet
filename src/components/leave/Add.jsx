@@ -134,7 +134,7 @@ const Add = () => {
                                     <th className="border border-gray-300 p-2">Assembly/Part</th>
                                     <th className="border border-gray-300 p-2">Std Condition</th>
                                     <th className="border border-gray-300 p-2">Check Method</th>
-                                    <th className="border border-gray-300 p-2">Check</th>
+                                    <th className="border border-gray-300 p-3">Check</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -144,7 +144,7 @@ const Add = () => {
                                     <td className="border border-gray-300 p-2 text-center">Cylinder, SPK and mic</td>
                                     <td className="border border-gray-300 p-2 text-center">No Dirt</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -179,7 +179,7 @@ const Add = () => {
                                     <td className="border border-gray-300 p-2 text-center">Check the Earth (Grounding) cable</td>
                                     <td className="border border-gray-300 p-2 text-center">No Damage</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -215,7 +215,7 @@ const Add = () => {
                                     <td className="border border-gray-300 p-2 text-center">Ensure the fixture should not have any misalignment and no dust particles</td>
                                     <td className="border border-gray-300 p-2 text-center">Firm Contact</td>
                                     <td className="border border-gray-300 p-2 text-center">Lock</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -250,7 +250,7 @@ const Add = () => {
                                     <td className="border border-gray-300 p-2 text-center">Check the fixture position and device seating properly without movement</td>
                                     <td className="border border-gray-300 p-2 text-center">No abnormalities</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -284,7 +284,7 @@ const Add = () => {
                                     <td className="border border-gray-300 p-2 text-center">Check the correct script selected according to model requirements</td>
                                     <td className="border border-gray-300 p-2 text-center">No abnormalities</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
