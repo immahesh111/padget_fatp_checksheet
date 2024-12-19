@@ -133,7 +133,7 @@ const Add2 = () => {
                                     <th className="border border-gray-300 p-2">Std Condition</th>
                                     <th className="border border-gray-300 p-2">Check Method</th>
                                     <th className="border border-gray-300 p-2">Tool Required</th>
-                                    <th className="border border-gray-300 p-2">Check</th>
+                                    <th className="border border-gray-300 p-3">Check</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -144,7 +144,7 @@ const Add2 = () => {
                                     <td className="border border-gray-300 p-2 text-center">No Dirt</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
                                     <td className="border border-gray-300 p-2 text-center">Cloth & Brush</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -180,7 +180,7 @@ const Add2 = () => {
                                     <td className="border border-gray-300 p-2 text-center">No Damage</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
                                     <td className="border border-gray-300 p-2 text-center">NA</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -217,7 +217,7 @@ const Add2 = () => {
                                     <td className="border border-gray-300 p-2 text-center">Firm Contact</td>
                                     <td className="border border-gray-300 p-2 text-center">Lock</td>
                                     <td className="border border-gray-300 p-2 text-center">NA</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -253,7 +253,7 @@ const Add2 = () => {
                                     <td className="border border-gray-300 p-2 text-center">No abnormalities</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
                                     <td className="border border-gray-300 p-2 text-center">Lux Meter</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -288,7 +288,7 @@ const Add2 = () => {
                                     <td className="border border-gray-300 p-2 text-center">No abnormalities</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
                                     <td className="border border-gray-300 p-2 text-center">NA</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
@@ -322,7 +322,7 @@ const Add2 = () => {
                                     <td className="border border-gray-300 p-2 text-center">No abnormalities</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
                                     <td className="border border-gray-300 p-2 text-center">NA</td>
-                                    <td className="border border-gray-300 p-2 text-center">
+                                    <td className="border border-gray-300 p-3 text-center">
                                         <div className="flex flex-col items-center">
                                             <label className="inline-flex items-center">
                                                 <input
