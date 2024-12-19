@@ -86,7 +86,7 @@ const Add = () => {
 
     return (
         <div className='max-w-4xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
-            <h2 className='text-2xl font-bold mb-6'>Checksheet Application Form</h2>
+            <h2 className='text-2xl font-bold mb-6'>DAILY MAINTENENCCE LDA AUDIO TESTER</h2>
 
             <form onSubmit={handleSubmit}>
                 <div className='flex flex-col space-y-4'>

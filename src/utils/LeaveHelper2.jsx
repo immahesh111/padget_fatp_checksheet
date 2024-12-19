@@ -100,7 +100,7 @@ export const LeaveButtons = ({ row }) => {
             <p><strong>Date:</strong> ${formatDate(row.date)}</p>
             <p><strong>Time:</strong> ${formatTime(row.time)}</p>
             
-            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENENCCE LDA AUDIO TESTER</h2>
+            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE CHECKLIST CQR TESTER</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
                 <thead>
                     <tr>
