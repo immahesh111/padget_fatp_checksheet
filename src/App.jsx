@@ -14,22 +14,27 @@ import Add from './components/employee/Add';
 import View from './components/employee/View';
 import Edit from './components/employee/Edit';
 import Summary from './components/EmployeeDashboard/Summary'
+
 import LeaveList from './components/leave/List'
 import FAList from './components/leave/List2'
 import LeaveList3 from './components/leave/List3'
 import LeaveList4 from './components/leave/List4'
 import LeaveList5 from './components/leave/List5'
+
 import AddLeave from './components/leave/Add'
 import AddLeave2 from './components/leave/Add2'
 import AddLeave3 from './components/leave/Add3'
 import AddLeave4 from './components/leave/Add4'
 import AddLeave5 from './components/leave/Add5'
+
 import Setting from './components/EmployeeDashboard/Setting';
+
 import Table from './components/leave/Table';
 import Table1 from './components/leave/Table1'
 import Table2 from './components/leave/Table2'
 import Table3 from './components/leave/Table3'
 import Table4 from './components/leave/Table4'
+
 import Detail from './components/leave/Detail';
 import Detail1 from './components/leave/Detail1';
 import Detail2 from './components/leave/Detail2';
