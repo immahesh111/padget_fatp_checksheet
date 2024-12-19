@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Detail4 = () => {
+const Detail5 = () => {
     const { id } = useParams();
     const [leave, setLeave] = useState(null);
     const navigate = useNavigate();
@@ -10,12 +10,12 @@ const Detail4 = () => {
     useEffect(() => {
         const fetchLeave = async () => {
             try {
-                const response = await axios.get(`https://fatp-api.onrender.com/api/leave4/detail/${id}`, {
+                const response = await axios.get(`https://fatp-api.onrender.com/api/leave5/detail/${id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
                 });
-
+        
                 if (response.data.success) {
                     console.log("Fetched Leave Data:", response.data.leave); // Log fetched data
                     setLeave(response.data.leave);
@@ -31,14 +31,14 @@ const Detail4 = () => {
     }, [id]);
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`https://fatp-api.onrender.com/api/leave4/${id}`, { status }, {
+            const response = await axios.put(`https://fatp-api.onrender.com/api/leave5/${id}`, { status }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
 
             if (response.data.success) {
-                navigate('/admin-dashboard/leaves4');
+                navigate('/admin-dashboard/leaves5');
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
@@ -52,7 +52,7 @@ const Detail4 = () => {
             {leave ? (
                 <div className='max-w-6xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
                     <h2 className='text-2xl font-bold mb-8 text-center'>
-                        CheckSheet Details
+                        PDL Tester
                     </h2>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                         {/* Left Column */}
@@ -84,7 +84,7 @@ const Detail4 = () => {
                             {/* Display Raw Material Storage Questions and Answers */}
                             {leave.rawMaterialStorage && (
                                 <div className="border-t border-b pt-4 pb-4">
-                                    <h3 className="text-lg font-bold mb-4">DAILY MAINTENANCE CHECKLIST FCT TESTER</h3>
+                                    <h3 className="text-lg font-bold mb-4">DAILY MAINTENANCE CHECKLIST KEY WRITE TESTER</h3>
                                     <table className="min-w-full border-collapse border border-gray-300">
                                         <thead>
                                             <tr>
@@ -92,6 +92,7 @@ const Detail4 = () => {
                                                 <th className="border border-gray-300 p-2 text-center">Assembly/Part</th>
                                                 <th className="border border-gray-300 p-2 text-center">Std Condition</th>
                                                 <th className="border border-gray-300 p-2 text-center">Check Method</th>
+                                                <th className="border border-gray-300 p-2 text-center">Tools Required</th>
                                                 <th className="border border-gray-300 p-2 text-center">Check</th>
                                             </tr>
                                         </thead>
@@ -99,9 +100,10 @@ const Detail4 = () => {
                                             {/* Question 1 */}
                                             <tr>
                                                 <td className="border border-gray-300 p-2 text-center">Cleaning</td>
-                                                <td className="border border-gray-300 p-2 text-center">level meter ,Axis meter and gray card</td>
+                                                <td className="border border-gray-300 p-2 text-center">CPU and Jig and fixture</td>
                                                 <td className="border border-gray-300 p-2 text-center">No Dirt</td>
                                                 <td className="border border-gray-300 p-2 text-center">Visual</td>
+                                                <td className="border border-gray-300 p-2 text-center">Cloth and Brush</td>
                                                 <td className="border border-gray-300 p-2 text-center">
                                                     {leave.rawMaterialStorage.question1 || 'Not answered'}
                                                 </td>
@@ -113,6 +115,7 @@ const Detail4 = () => {
                                                 <td className="border border-gray-300 p=2 text-center">Check the Earth (Grounding) cable</td>
                                                 <td className="border border-gray=300 p=2 text-center">No Damage</td>
                                                 <td className="border border-gray=300 p=2 text-center">Visual</td>
+                                                <td className="border border-gray-300 p-2 text-center">NA</td>
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question2 || 'Not answered'}
                                                 </td>
@@ -124,6 +127,7 @@ const Detail4 = () => {
                                                 <td className="border border-gray=300 p=2 text-center">Ensure the fixture should not have any misalignment and no dust particles</td>
                                                 <td className="border border-gray=300 p=2 text-center">Firm Contact</td>
                                                 <td className="border border-gray=300 p=2 text-center">Lock</td>
+                                                <td className="border border-gray-300 p-2 text-center">NA</td>
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question3 || 'Not answered'}
                                                 </td>
@@ -132,9 +136,10 @@ const Detail4 = () => {
                                             {/* Question 4 */}
                                             <tr>
                                                 <td className="border border-gray=300 p=2 text-center">Check/ Change</td>
-                                                <td className="border border-gray=300 p=2 text-center">Check LUX value</td>
+                                                <td className="border border-gray=300 p=2 text-center">Check the fixture position and device seating properly without movement</td>
                                                 <td className="border border-gray=300 p=2 text-center">No abnormalities</td>
                                                 <td className="border border-gray=300 p=2 text-center">Visual</td>
+                                                <td className="border border-gray-300 p-2 text-center">NA</td>
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question4 || 'Not answered'}
                                                 </td>
@@ -142,32 +147,21 @@ const Detail4 = () => {
 
                                             {/* Question 5 */}
                                             <tr>
-                                                <td className="border border-gray=300 p=2 text-center">Check/ Change</td>
-                                                <td className="border border-gray=300 p=2 text-center">Check the fixture position and device seating properly without movement</td>
+                                                <td className="border border-gray=300 p=2 text-center">Check</td>
+                                                <td className="border border-gray=300 p=2 text-center">Check the correct script selected according to model requirements</td>
                                                 <td className="border border-gray=300 p=2 text-center">No abnormalities</td>
                                                 <td className="border border-gray=300 p=2 text-center">Visual</td>
+                                                <td className="border border-gray-300 p-2 text-center">NA</td>
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question5 || 'Not answered'}
                                                 </td>
                                             </tr>
 
-                                            {/* Question 6 */}
-                                            <tr>
-                                                <td className="border border-gray=300 p=2 text-center">Check</td>
-                                                <td className="border border-gray=300 p=2 text-center">Check the correct script selected according to model requirements</td>
-                                                <td className="border border-gray=300 p=2 text-center">No abnormalities</td>
-                                                <td className="border border-gray=300 p=2 text-center">Visual</td>
-                                                <td className="border border-gray=300 p=2 text-center">
-                                                    {leave.rawMaterialStorage.question6 || 'Not answered'}
-                                                </td>
-                                            </tr>
-
-                                            
-
                                         </tbody>
                                     </table>
                                 </div>
                             )}
+
                         </div>
 
                         {/* Right Column - Empty or Additional Details */}
@@ -184,4 +178,4 @@ const Detail4 = () => {
     );
 };
 
-export default Detail4;
+export default Detail5;
