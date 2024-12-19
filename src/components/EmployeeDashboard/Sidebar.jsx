@@ -84,7 +84,7 @@ const Sidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaBuilding className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>SPI Machine Checksheet</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>CQR Tester</span>
             </>
           )}
         </NavLink>

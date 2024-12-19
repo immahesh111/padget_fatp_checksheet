@@ -96,7 +96,7 @@ const AdminSidebar = ({ isOpen }) => {
           {({ isActive }) => (
             <>
               <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>SPI Approval</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>CQR Tester Approval</span>
             </>
           )}
         </NavLink>
