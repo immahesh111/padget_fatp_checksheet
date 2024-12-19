@@ -90,6 +90,7 @@ function App() {
           <Route path='/employee-dashboard/leaves/:id' element={<LeaveList />}></Route>
           <Route path='/employee-dashboard/leaves1/:id' element={<FAList/>}></Route>
           <Route path='/employee-dashboard/leaves2/:id' element={<LeaveList3/>}></Route>
+          <Route path='/employee-dashboard/leaves3/:id' element={<LeaveList4/>}></Route>
           <Route path='/employee-dashboard/add-leave' element={<AddLeave />}></Route>
           <Route path='/employee-dashboard/add-leave2' element={<AddLeave2 />}></Route>
           <Route path='/employee-dashboard/add-leave3' element={<AddLeave3 />}></Route>
