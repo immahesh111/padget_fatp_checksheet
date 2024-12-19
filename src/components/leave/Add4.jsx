@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 import { useNavigate } from 'react-router-dom';
 
-const Add3 = () => {
+const Add4 = () => {
     const { user } = useAuth();
 
     const [leave, setLeave] = useState({
@@ -64,14 +64,14 @@ const Add3 = () => {
         console.log("Submitting leave data:", leave); // Log leave data before submission
 
         try {
-            const response = await axios.post(`https://fatp-api.onrender.com/api/leave2/add`, leave, {
+            const response = await axios.post(`https://fatp-api.onrender.com/api/leave3/add`, leave, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
 
             if (response.data.success) {
-                navigate(`/employee-dashboard/leaves2/${user._id}`);
+                navigate(`/employee-dashboard/leaves3/${user._id}`);
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
@@ -82,7 +82,7 @@ const Add3 = () => {
 
     return (
         <div className='max-w-4xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
-            <h2 className='text-2xl font-bold mb-6'>DAILY MAINTENANCE CHECKLIST  CQR TESTER</h2>
+            <h2 className='text-2xl font-bold mb-6'>DAILY MAINTENANCE CHECKLIST  PDL TESTER</h2>
 
             <form onSubmit={handleSubmit}>
                 <div className='flex flex-col space-y-4'>
@@ -120,7 +120,7 @@ const Add3 = () => {
 
                     {/* Raw Material Storage Subdivision */}
                     <h3 className='text-lg font-bold cursor-pointer mt-4 p-2 border border-teal-500 bg-teal-100 rounded' onClick={() => setShowRawMaterialStorage(!showRawMaterialStorage)}>
-                        DAILY MAINTENENCCE CHECKLIST CQR TESTER
+                        DAILY MAINTENENCCE CHECKLIST PDL TESTER
                     </h3>
 
                     {showRawMaterialStorage && (
@@ -333,4 +333,4 @@ const Add3 = () => {
     );
 };
 
-export default Add3;
+export default Add4;
