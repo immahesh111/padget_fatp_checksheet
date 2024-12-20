@@ -10,10 +10,10 @@ const Detail5 = () => {
 
     // Hardcoded list of approvers
     const approvers = [
-        { _id: '1', name: 'John Doe' },
-        { _id: '2', name: 'Jane Smith' },
-        { _id: '3', name: 'Alice Johnson' },
-        { _id: '4', name: 'Bob Brown' }
+        { _id: '1', name: 'Rajini' },
+        { _id: '2', name: 'Kamal' },
+        { _id: '3', name: 'Aarya' },
+        { _id: '4', name: 'Simbu' }
     ];
 
     useEffect(() => {

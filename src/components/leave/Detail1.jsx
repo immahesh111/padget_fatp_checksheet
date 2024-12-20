@@ -10,10 +10,10 @@ const Detail1 = () => {
 
     // Hardcoded list of approvers
     const approvers = [
-        { _id: '1', name: 'John Doe' },
-        { _id: '2', name: 'Jane Smith' },
-        { _id: '3', name: 'Alice Johnson' },
-        { _id: '4', name: 'Bob Brown' }
+        { _id: '1', name: 'Senthil' },
+        { _id: '2', name: 'Rajan' },
+        { _id: '3', name: 'Arivu' },
+        { _id: '4', name: 'Anbu' }
     ];
 
 

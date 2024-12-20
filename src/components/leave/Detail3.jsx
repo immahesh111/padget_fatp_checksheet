@@ -10,8 +10,8 @@ const Detail3 = () => {
 
     // Hardcoded list of approvers
     const approvers = [
-        { _id: '1', name: 'John Doe' },
-        { _id: '2', name: 'Jane Smith' },
+        { _id: '1', name: 'John Cena' },
+        { _id: '2', name: 'Roman Reigns' },
         { _id: '3', name: 'Lie Bhaskar' },
         { _id: '4', name: 'Balraj' }
     ];

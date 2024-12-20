@@ -9,44 +9,54 @@ const Table1 = () => {
     const [filteredLeaves, setFilteredLeaves] = useState(null)
 
 
+        // Hardcoded list of approvers
+    const approvers = [
+        { _id: '1', name: 'Senthil' },
+        { _id: '2', name: 'Rajan' },
+        { _id: '3', name: 'Arivu' },
+        { _id: '4', name: 'Anbu' }
+    ];
+
     const fetchLeaves = async () => {
         try {
             const response = await axios.get('https://fatp-api.onrender.com/api/leave1', {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
-            })
-            console.log(response.data)
-
+            });
+    
             if (response.data.success) {
                 let sno = 1;
-                const data = await response.data.leaves.map((leave) => (
-                    {
+                const data = await Promise.all(response.data.leaves.map(async (leave) => {
+                    // Get approver's name based on ID
+                    const approver = approvers.find(a => a._id === leave.approver) || { name: 'Unknown' }; // Fallback if not found
+    
+                    return {
                         _id: leave._id,
                         sno: sno++,
                         employeeId: leave.employeeId.employeeId,
                         name: leave.employeeId.userId.name,
                         leaveType: leave.leaveType,
                         department: leave.employeeId.department.dep_name,
-                        shift:leave.shift,
-                        date:leave.date,
-                        time:leave.updatedAt,
+                        date: leave.date,
+                        time: leave.updatedAt,
+                        shift: leave.shift,
                         status: leave.status,
+                        approver: approver.name, // Store the actual name here
                         action: <LeaveButtons _id={leave._id} />,
-                    }
-                ))
+                    };
+                }));
+    
                 setLeaves(data);
-                setFilteredLeaves(data)
-
-
+                setFilteredLeaves(data);
             }
-        }
-        catch (error) {
+        } catch (error) {
             if (error.response && !error.response.data.success) {
-                alert(error.response.data.error)
+                alert(error.response.data.error);
             }
         }
-    }
+    };
+
     useEffect(() => {
         fetchLeaves();
     }, []);
