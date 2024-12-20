@@ -135,7 +135,7 @@ const Detail = () => {
 
                             {leave.rawMaterialStorage && (
                                 <div className="border-t border-b pt-4 pb-4">
-                                    <h3 className="text-lg font-bold mb-4">Raw Material Storage Questions</h3>
+                                    <h3 className="text-lg font-bold mb-4">DAILY MAINTENANCE CHECKLIST LDA AUDIO TESTER</h3>
                                     <table className="min-w-full border-collapse border border-gray-300">
                                         <thead>
                                             <tr>

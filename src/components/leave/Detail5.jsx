@@ -5,7 +5,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 const Detail5 = () => {
     const { id } = useParams();
     const [leave, setLeave] = useState(null);
+    const [selectedApprover, setSelectedApprover] = useState(''); // State for selected approver
     const navigate = useNavigate();
+
+    // Hardcoded list of approvers
+    const approvers = [
+        { _id: '1', name: 'John Doe' },
+        { _id: '2', name: 'Jane Smith' },
+        { _id: '3', name: 'Alice Johnson' },
+        { _id: '4', name: 'Bob Brown' }
+    ];
 
     useEffect(() => {
         const fetchLeave = async () => {
@@ -31,13 +40,19 @@ const Detail5 = () => {
     }, [id]);
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`https://fatp-api.onrender.com/api/leave5/${id}`, { status }, {
+            const response = await axios.put(`https://fatp-api.onrender.com/api/leave5/${id}`, { status, approver: selectedApprover }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
 
             if (response.data.success) {
+                setLeave(prevLeave => ({
+                    ...prevLeave,
+                    status,
+                    approver: selectedApprover // Store the selected approver's name in state
+                }));
+
                 navigate('/admin-dashboard/leaves5');
             }
         } catch (error) {
@@ -45,6 +60,12 @@ const Detail5 = () => {
                 alert(error.response.data.error);
             }
         }
+    };
+
+    // Function to get the approver's name based on selectedApprover ID
+    const getApproverName = (approverId) => {
+        const approver = approvers.find(a => a._id === approverId);
+        return approver ? approver.name : '';
     };
 
     return (
@@ -62,6 +83,21 @@ const Detail5 = () => {
                                 <span className='text-lg font-bold'>Status:</span>
                                 {leave.status === "Pending" ? (
                                     <>
+
+                                    {/* Combobox for Approver Selection */}
+                                    <select
+                                            value={selectedApprover}
+                                            onChange={(e) => setSelectedApprover(e.target.value)}
+                                            className='border rounded p-1'
+                                        >
+                                            <option value="">Select Approver</option>
+                                            {approvers.map((approver) => (
+                                                <option key={approver._id} value={approver._id}>
+                                                    {approver.name} {/* Displaying the name of the approver */}
+                                                </option>
+                                            ))}
+                                        </select>
+
                                         {/* Approval and Rejection Buttons */}
                                         <button
                                             onClick={() => changeStatus(leave._id, "Approve")}
@@ -79,6 +115,15 @@ const Detail5 = () => {
                                 ) : (
                                     <span className='font-medium'>{leave.status}</span>
                                 )}
+
+                                {/* Display Approver Name After Approval or Rejection */}
+                                {(leave.status === "Approve" || leave.status === "Rejected") && (
+                                    <div className='mt-4'>
+                                        <span className='text-lg font-bold'>Approved by:</span>
+                                        <span className='ml-2'>{getApproverName(leave.approver)}</span> {/* Displaying the name of the approver */}
+                                    </div>
+                                )}
+                                
                             </div>
 
                             {/* Display Raw Material Storage Questions and Answers */}
