@@ -103,16 +103,24 @@ export const LeaveButtons = ({ row }) => {
             const element = document.createElement('div');
             
             element.innerHTML = `
-           <img src="${base64Image}" alt="Description of Image" style="display: block; margin: 0 auto; width: 150px; height: auto;" />
+            <img src="${base64Image}" alt="Description of Image" style="display: block; margin: 0 auto; width: 150px; height: auto;" />
             <h1 style="text-align: center; font-weight: bold;">Check Sheet Details</h1>
-            <p><strong>Employee ID:</strong> ${row.employeeId}</p>
-            <p><strong>Name:</strong> ${row.name}</p>
-            <p><strong>Department:</strong> ${row.department}</p>
-            <p><strong>Status:</strong> ${leaveDetails.status}</p>
-            <p><strong>Date:</strong> ${formatDate(row.date)}</p>
-            <p><strong>Time:</strong> ${formatTime(row.time)}</p>
             
-            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENENCE LDA AUDIO TESTER</h2>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                <div>
+                    <p><strong>Employee ID:</strong> ${row.employeeId}</p>
+                    <p><strong>Name:</strong> ${row.name}</p>
+                    <p><strong>Department:</strong> ${row.department}</p>
+                    <p><strong>Status:</strong> ${leaveDetails.status}</p>
+                </div>
+                <div style="text-align: right;">
+                    <p><strong>Date:</strong> ${formatDate(row.date)}</p>
+                    <p><strong>Time:</strong> ${formatTime(row.time)}</p>
+                    <p><strong>Doc No:</strong> PAD/ENG/ASM/XM/F/20</p>
+                </div>
+            </div>
+        
+            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE LDA AUDIO TESTER</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
                 <thead>
                     <tr>
@@ -124,48 +132,49 @@ export const LeaveButtons = ({ row }) => {
                     </tr>
                 </thead>
                 <tbody>
-                     <tr>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cleaning</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cylinder, SPK and mic</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Dirt</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Earth (Grounding) cable</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Damage</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</td>
-                        </tr>
-                        <tr>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Ensure the fixture should not have any misalignment and no dust particles</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Firm Contact</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Lock</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</td>
-                        </tr>
-                        <tr>
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cleaning</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cylinder, SPK and mic</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Dirt</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Earth (Grounding) cable</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Damage</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Change</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Ensure the fixture should not have any misalignment and no dust particles</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Firm Contact</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Lock</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</td>
+                    </tr>
+        
                     <!-- Question 4 -->
                     <tr>
-                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check/ Change</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the fixture position and device seating properly without movement</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">No abnormalities</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Visual</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Check/ Change</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Check the fixture position and device seating properly without movement</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">No abnormalities</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Visual</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</td>
                     </tr>
         
                     <!-- Question 5 -->
                     <tr>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the correct script selected according to model requirements</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">No abnormalities</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Visual</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Check</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Check the correct script selected according to model requirements</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">No abnormalities</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">Visual</td>
+                        <td style="border: 1px solid #000; padding: 8px;text-align:center">${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</td>
                     </tr>
+        
                 </tbody>
-            </table>
-        `;
+            </table>`;
+        
         
 
             // Set options for html2pdf
