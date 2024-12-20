@@ -117,7 +117,7 @@ export const LeaveButtons = ({ row }) => {
                     <p><strong>Doc No:</strong> PAD/ENG/ASM/XM/F/20</p>
                     <p><strong>Date:</strong> ${formatDate(row.date)}</p>
                     <p><strong>Time:</strong> ${formatTime(row.time)}</p>
-                    <p><strong>Approved By:</strong> ${row.approver}</p>
+                    <p><strong>Approved By:</strong> ${row.approver || 'Not Approved Yet'}</p> <!-- Added Approver Name -->
                 </div>
             </div>
         

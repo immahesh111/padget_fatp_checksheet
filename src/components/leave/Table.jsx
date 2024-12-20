@@ -31,7 +31,7 @@ const Table = () => {
                         time:leave.updatedAt,
                         shift:leave.shift,
                         status: leave.status,
-                        aprrover:leave.approver,
+                        approver:leave.approver,
                         action: <LeaveButtons _id={leave._id} />,
                     }
                 ))
