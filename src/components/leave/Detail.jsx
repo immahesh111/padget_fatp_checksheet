@@ -47,6 +47,12 @@ const Detail = () => {
             });
 
             if (response.data.success) {
+                // Update leave state with the new status and approver details
+                setLeave(prevLeave => ({
+                    ...prevLeave,
+                    status,
+                    approver: selectedApprover // Assuming you also want to store the approver ID
+                }));
                 navigate('/admin-dashboard/leaves');
             }
         } catch (error) {
@@ -54,6 +60,12 @@ const Detail = () => {
                 alert(error.response.data.error);
             }
         }
+    };
+
+      // Function to get the approver's name based on selectedApprover ID
+      const getApproverName = (approverId) => {
+        const approver = approvers.find(a => a._id === approverId);
+        return approver ? approver.name : '';
     };
 
     return (
@@ -104,10 +116,19 @@ const Detail = () => {
                                     <span className='font-medium'>{leave.status}</span>
                                     
                                 )}
+
+                                {/* Display Approver Name After Approval or Rejection */}
+                            {(leave.status === "Approve" || leave.status === "Rejected") && (
+                                <div className='mt-4'>
+                                    <span className='text-lg font-bold'>Approved by:</span>
+                                    <span className='ml-2'>{getApproverName(leave.approver)}</span> {/* Displaying the name of the approver */}
+                                </div>
+                            )}
                                 
                             </div>
 
                             {/* Display Raw Material Storage Questions and Answers */}
+
                             {leave.rawMaterialStorage && (
                                 <div className="border-t border-b pt-4 pb-4">
                                     <h3 className="text-lg font-bold mb-4">Raw Material Storage Questions</h3>
