@@ -114,9 +114,10 @@ export const LeaveButtons = ({ row }) => {
                     <p><strong>Status:</strong> ${leaveDetails.status}</p>
                 </div>
                 <div style="text-align: right;">
+                    <p><strong>Doc No:</strong> PAD/ENG/ASM/XM/F/20</p>
                     <p><strong>Date:</strong> ${formatDate(row.date)}</p>
                     <p><strong>Time:</strong> ${formatTime(row.time)}</p>
-                    <p><strong>Doc No:</strong> PAD/ENG/ASM/XM/F/20</p>
+                    <p><strong>Approved By:</strong> ${row.approver}</p>
                 </div>
             </div>
         

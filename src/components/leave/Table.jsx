@@ -8,7 +8,6 @@ const Table = () => {
     const [leaves, setLeaves] = useState(null)
     const [filteredLeaves, setFilteredLeaves] = useState(null)
 
-
     const fetchLeaves = async () => {
         try {
             const response = await axios.get('https://fatp-api.onrender.com/api/leave', {
@@ -32,6 +31,7 @@ const Table = () => {
                         time:leave.updatedAt,
                         shift:leave.shift,
                         status: leave.status,
+                        aprrover:leave.approver,
                         action: <LeaveButtons _id={leave._id} />,
                     }
                 ))
