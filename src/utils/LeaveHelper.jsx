@@ -101,25 +101,26 @@ export const LeaveButtons = ({ row }) => {
 
             // Create a new HTML element to render the leave details
             const element = document.createElement('div');
-            
+
             element.innerHTML = `
             <img src="${base64Image}" alt="Description of Image" style="display: block; margin: 0 auto; width: 150px; height: auto;" />
             <h1 style="text-align: center; font-weight: bold;">Check Sheet Details</h1>
             
             <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-                <div>
-                    <p><strong>Employee ID:</strong> ${row.employeeId}</p>
-                    <p><strong>Name:</strong> ${row.name}</p>
-                    <p><strong>Department:</strong> ${row.department}</p>
-                    <p><strong>Status:</strong> ${leaveDetails.status}</p>
-                </div>
-                <div style="text-align: right;">
-                    <p><strong>Doc No:</strong> PAD/ENG/ASM/XM/F/20</p>
-                    <p><strong>Date:</strong> ${formatDate(row.date)}</p>
-                    <p><strong>Time:</strong> ${formatTime(row.time)}</p>
-                    <p><strong>Approved By:</strong> ${row.approver || 'Not Approved Yet'}</p> <!-- Added Approver Name -->
-                </div>
-            </div>
+    <div>
+        <p><strong>Employee ID:</strong> ${row.employeeId}</p>
+        <p><strong>Name:</strong> ${row.name}</p>
+        <p><strong>Department:</strong> ${row.department}</p>
+        <p><strong>Status:</strong> ${leaveDetails.status}</p>
+    </div>
+    <div style="flex: 1; padding-left: 20px;"> <!-- Added padding for spacing -->
+        <p><strong>Doc No:</strong> PAD/ENG/ASM/XM/F/20</p>
+        <p><strong>Date:</strong> ${formatDate(row.date)}</p>
+        <p><strong>Time:</strong> ${formatTime(row.time)}</p>
+        <p><strong>Approved By:</strong> ${row.approver || 'Not Approved Yet'}</p> <!-- Added Approver Name -->
+    </div>
+</div>
+
         
             <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE LDA AUDIO TESTER</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
@@ -175,8 +176,8 @@ export const LeaveButtons = ({ row }) => {
         
                 </tbody>
             </table>`;
-        
-        
+
+
 
             // Set options for html2pdf
             const options = {
