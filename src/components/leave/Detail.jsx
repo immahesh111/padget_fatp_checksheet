@@ -40,19 +40,22 @@ const Detail = () => {
     }, [id]);
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`https://fatp-api.onrender.com/api/leave/${id}`, { status, approver: selectedApprover }, {
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`
+            const response = await axios.put(`https://fatp-api.onrender.com/api/leave/${id}`,
+                { status, approver: selectedApprover }, // Include selected approver's name
+                {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`
+                    }
                 }
-            });
+            );
 
             if (response.data.success) {
-                // Update leave state with the new status and approver details
                 setLeave(prevLeave => ({
                     ...prevLeave,
                     status,
-                    approver: selectedApprover // Assuming you also want to store the approver ID
+                    approver: selectedApprover // Store the selected approver's name in state
                 }));
+
                 navigate('/admin-dashboard/leaves');
             }
         } catch (error) {
@@ -62,8 +65,9 @@ const Detail = () => {
         }
     };
 
-      // Function to get the approver's name based on selectedApprover ID
-      const getApproverName = (approverId) => {
+
+    // Function to get the approver's name based on selectedApprover ID
+    const getApproverName = (approverId) => {
         const approver = approvers.find(a => a._id === approverId);
         return approver ? approver.name : '';
     };
@@ -84,10 +88,10 @@ const Detail = () => {
                                 {leave.status === "Pending" ? (
                                     <>
 
-                                     {/* Combobox for Approver Selection */}
-                                     <select 
-                                            value={selectedApprover} 
-                                            onChange={(e) => setSelectedApprover(e.target.value)} 
+                                        {/* Combobox for Approver Selection */}
+                                        <select
+                                            value={selectedApprover}
+                                            onChange={(e) => setSelectedApprover(e.target.value)}
                                             className='border rounded p-1'
                                         >
                                             <option value="">Select Approver</option>
@@ -114,17 +118,17 @@ const Detail = () => {
                                     </>
                                 ) : (
                                     <span className='font-medium'>{leave.status}</span>
-                                    
+
                                 )}
 
                                 {/* Display Approver Name After Approval or Rejection */}
-                            {(leave.status === "Approve" || leave.status === "Rejected") && (
-                                <div className='mt-4'>
-                                    <span className='text-lg font-bold'>Approved by:</span>
-                                    <span className='ml-2'>{getApproverName(leave.approver)}</span> {/* Displaying the name of the approver */}
-                                </div>
-                            )}
-                                
+                                {(leave.status === "Approve" || leave.status === "Rejected") && (
+                                    <div className='mt-4'>
+                                        <span className='text-lg font-bold'>Approved by:</span>
+                                        <span className='ml-2'>{getApproverName(leave.approver)}</span> {/* Displaying the name of the approver */}
+                                    </div>
+                                )}
+
                             </div>
 
                             {/* Display Raw Material Storage Questions and Answers */}
