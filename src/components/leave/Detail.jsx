@@ -104,7 +104,7 @@ const Detail = () => {
                                     <span className='font-medium'>{leave.status}</span>
                                     
                                 )}
-                                <span className="font-medium">{leave.approver}</span>
+                                
                             </div>
 
                             {/* Display Raw Material Storage Questions and Answers */}
