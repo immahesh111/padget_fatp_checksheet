@@ -113,13 +113,14 @@ export const LeaveButtons = ({ row }) => {
         <p><strong>Department:</strong> ${row.department}</p>
         <p><strong>Status:</strong> ${leaveDetails.status}</p>
     </div>
-    <div style="flex: 1; padding-left: 20px;"> <!-- Added padding for spacing -->
+    <div style="text-align: left; margin-left: auto;"> <!-- Align text left and push div to right -->
         <p><strong>Doc No:</strong> PAD/ENG/ASM/XM/F/20</p>
         <p><strong>Date:</strong> ${formatDate(row.date)}</p>
         <p><strong>Time:</strong> ${formatTime(row.time)}</p>
         <p><strong>Approved By:</strong> ${row.approver || 'Not Approved Yet'}</p> <!-- Added Approver Name -->
     </div>
 </div>
+
 
         
             <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE LDA AUDIO TESTER</h2>
