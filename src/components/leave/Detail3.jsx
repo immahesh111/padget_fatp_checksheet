@@ -12,8 +12,8 @@ const Detail3 = () => {
     const approvers = [
         { _id: '1', name: 'John Doe' },
         { _id: '2', name: 'Jane Smith' },
-        { _id: '3', name: 'Alice Johnson' },
-        { _id: '4', name: 'Bob Brown' }
+        { _id: '3', name: 'Lie Bhaskar' },
+        { _id: '4', name: 'Balraj' }
     ];
 
 
