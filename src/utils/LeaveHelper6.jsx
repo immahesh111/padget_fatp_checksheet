@@ -108,7 +108,7 @@ export const LeaveButtons = ({ row }) => {
     </div>
 </div>
             
-            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE CHECKLIST KEY WRITE TESTER</h2>
+            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE CHECKLIST FAMMI TESTER</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
                 <thead>
                     <tr>

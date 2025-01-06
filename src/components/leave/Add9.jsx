@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../../context/authContext';
 import { useNavigate } from 'react-router-dom';
 
-const Add7 = () => {
+const Add9 = () => {
     const { user } = useAuth();
 
     const [leave, setLeave] = useState({
@@ -64,14 +64,14 @@ const Add7 = () => {
         console.log("Submitting leave data:", leave); // Log leave data before submission
 
         try {
-            const response = await axios.post(`https://fatp-api.onrender.com/api/leave6/add`, leave, {
+            const response = await axios.post(`https://fatp-api.onrender.com/api/leave8/add`, leave, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
 
             if (response.data.success) {
-                navigate(`/employee-dashboard/leaves6/${user._id}`);
+                navigate(`/employee-dashboard/leaves8/${user._id}`);
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
@@ -82,7 +82,7 @@ const Add7 = () => {
 
     return (
         <div className='max-w-4xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
-            <h2 className='text-2xl font-bold mb-6'>DAILY MAINTENANCE CHECKLIST FAMMI TESTER</h2>
+            <h2 className='text-2xl font-bold mb-6'>DAILY MAINTENANCE CHECKLIST FMT TESTER</h2>
 
             <form onSubmit={handleSubmit}>
                 <div className='flex flex-col space-y-4'>
@@ -120,7 +120,7 @@ const Add7 = () => {
 
                     {/* Raw Material Storage Subdivision */}
                     <h3 className='text-lg font-bold cursor-pointer mt-4 p-2 border border-teal-500 bg-teal-100 rounded' onClick={() => setShowRawMaterialStorage(!showRawMaterialStorage)}>
-                    DAILY MAINTENANCE CHECKLIST FAMMI TESTER
+                    DAILY MAINTENANCE CHECKLIST FMT TESTER
                     </h3>
 
                     {showRawMaterialStorage && (
@@ -139,7 +139,7 @@ const Add7 = () => {
                                 {/* Question 1 */}
                                 <tr>
                                     <td className="border border-gray-300 p-2 text-center">Cleaning</td>
-                                    <td className="border border-gray-300 p-2 text-center">Camera ,cylinder & fixture</td>
+                                    <td className="border border-gray-300 p-2 text-center">Check the Earth (Grounding) cable</td>
                                     <td className="border border-gray-300 p-2 text-center">No Dirt</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
                                     <td className="border border-gray-300 p-2 text-center">Cloth & Brush</td>
@@ -283,7 +283,7 @@ const Add7 = () => {
                                 {/* Question 5 */}
                                 <tr>
                                     <td className="border border-gray-300 p-2 text-center">Check</td>
-                                    <td className="border border-gray-300 p-2 text-center">Check the correct script selected according to model requirements</td>
+                                    <td className="border border-gray-300 p-2 text-center">Check the correct Tool and parameter selected according model requirements</td>
                                     <td className="border border-gray-300 p-2 text-center">No abnormalities</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
                                     <td className="border border-gray-300 p-2 text-center">NA</td>
@@ -333,4 +333,4 @@ const Add7 = () => {
     );
 };
 
-export default Add7;
+export default Add9;
