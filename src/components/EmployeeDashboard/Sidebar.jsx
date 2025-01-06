@@ -137,14 +137,14 @@ const Sidebar = ({ isOpen }) => {
         <NavLink
           to={`/employee-dashboard/leaves6/${user._id}`}
           className={({ isActive }) => `
-    ${isActive ? "bg-white" : ""} 
+    ${isActive ? "bg-white" : ""}
     flex items-center space-x-4 block py-2.5 px-4 rounded
   `}
         >
           {({ isActive }) => (
             <>
               <FaBuilding className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
-              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>FAMMI TESTER</span>
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>FAMMI Tester</span>
             </>
           )}
         </NavLink>

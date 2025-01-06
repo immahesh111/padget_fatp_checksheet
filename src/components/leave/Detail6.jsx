@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Detail5 = () => {
+const Detail6 = () => {
     const { id } = useParams();
     const [leave, setLeave] = useState(null);
     const [selectedApprover, setSelectedApprover] = useState(''); // State for selected approver
@@ -53,7 +53,7 @@ const Detail5 = () => {
                     approver: selectedApprover // Store the selected approver's name in state
                 }));
 
-                navigate('/admin-dashboard/leaves5');
+                navigate('/admin-dashboard/leaves6');
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
@@ -223,4 +223,4 @@ const Detail5 = () => {
     );
 };
 
-export default Detail5;
+export default Detail6;

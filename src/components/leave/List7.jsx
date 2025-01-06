@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 
-const List6 = () => {
+const List7 = () => {
     const [leaves, setLeaves] = useState(null);
     let sno = 1;
     const { id } = useParams();
@@ -57,7 +57,7 @@ const List6 = () => {
             <div className='flex justify-between items-center'>
                 <input type="text" placeholder='Search By Dept Name' className='px-4 py-0.5 border'></input>
                 {user.role === "employee" && 
-                    <Link to="/employee-dashboard/add-leave6" className='px-4 py-1 bg-custom-purple rounded text-white'>Fill New CheckSheet</Link>}
+                    <Link to="/employee-dashboard/add-leave7" className='px-4 py-1 bg-custom-purple rounded text-white'>Fill New CheckSheet</Link>}
             </div>
 
             <table className='w-full text-sm text-left text-gray-700 mt-6'>
@@ -94,4 +94,4 @@ const List6 = () => {
     );
 };
 
-export default List6;
+export default List7;

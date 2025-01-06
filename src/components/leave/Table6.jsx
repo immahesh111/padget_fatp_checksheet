@@ -4,7 +4,7 @@ import { columns, LeaveButtons } from '../../utils/LeaveHelper6'
 import DataTable from 'react-data-table-component'
 import axios from 'axios'
 
-const Table5 = () => {
+const Table6 = () => {
     const [leaves, setLeaves] = useState(null)
     const [filteredLeaves, setFilteredLeaves] = useState(null)
     // Hardcoded list of approvers
@@ -102,4 +102,4 @@ const Table5 = () => {
     );
 };
 
-export default Table5
+export default Table6
