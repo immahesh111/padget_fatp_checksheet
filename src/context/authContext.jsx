@@ -48,6 +48,7 @@ const authContext = ({children}) => {
     const logout = () => {
         setUser(null)
         localStorage.removeItem("token")
+        navigate('/login');
     }
 
   return (
