@@ -25,6 +25,7 @@ import LeaveList7 from './components/leave/List7'
 import LeaveList8 from './components/leave/List8'
 import LeaveList9 from './components/leave/List9'
 import LeaveList10 from './components/leave/List10'
+import LeaveList11 from './components/leave/List11'
 
 import AddLeave from './components/leave/Add'
 import AddLeave2 from './components/leave/Add2'
@@ -36,7 +37,7 @@ import AddLeave7 from './components/leave/Add7'
 import AddLeave8 from './components/leave/Add8'
 import AddLeave9 from './components/leave/Add9'
 import AddLeave10 from './components/leave/Add10'
-
+import AddLeave11 from './components/leave/Add11'
 import Setting from './components/EmployeeDashboard/Setting';
 
 import Table from './components/leave/Table';
@@ -49,6 +50,7 @@ import Table6 from './components/leave/Table6'
 import Table7 from './components/leave/Table7'
 import Table8 from './components/leave/Table8'
 import Table9 from './components/leave/Table9'
+import Table10 from './components/leave/Table10'
 
 import Detail from './components/leave/Detail';
 import Detail1 from './components/leave/Detail1';
@@ -60,6 +62,7 @@ import Detail6 from './components/leave/Detail6';
 import Detail7 from './components/leave/Detail7';
 import Detail8 from './components/leave/Detail8';
 import Detail9 from './components/leave/Detail9';
+import Detail10 from './components/leave/Detail10';
 
 
 function App() {
@@ -99,6 +102,7 @@ function App() {
           <Route path="/admin-dashboard/leaves7" element={<Table7 />}></Route>
           <Route path="/admin-dashboard/leaves8" element={<Table8 />}></Route>
           <Route path="/admin-dashboard/leaves9" element={<Table9 />}></Route>
+          <Route path="/admin-dashboard/leaves10" element={<Table10 />}></Route>
 
           <Route path="/admin-dashboard/leaves/:id" element={<Detail />}></Route>
           <Route path="/admin-dashboard/leaves1/:id" element={<Detail1 />}></Route>
@@ -110,6 +114,7 @@ function App() {
           <Route path="/admin-dashboard/leaves7/:id" element={<Detail7 />}></Route>
           <Route path="/admin-dashboard/leaves8/:id" element={<Detail8 />}></Route>
           <Route path="/admin-dashboard/leaves9/:id" element={<Detail9 />}></Route>
+          <Route path="/admin-dashboard/leaves10/:id" element={<Detail10 />}></Route>
 
 
           <Route path="/admin-dashboard/employees/leaves/:id" element={<LeaveList />}></Route>
@@ -122,6 +127,7 @@ function App() {
           <Route path="/admin-dashboard/employees/leaves7/:id" element={<LeaveList8 />}></Route>
           <Route path="/admin-dashboard/employees/leaves8/:id" element={<LeaveList9 />}></Route>
           <Route path="/admin-dashboard/employees/leaves9/:id" element={<LeaveList10 />}></Route>
+          <Route path="/admin-dashboard/employees/leaves10/:id" element={<LeaveList11 />}></Route>
 
           <Route path="/admin-dashboard/setting" element={<Setting />}></Route>
         </Route>
@@ -147,6 +153,7 @@ function App() {
           <Route path='/employee-dashboard/leaves7/:id' element={<LeaveList8/>}></Route>
           <Route path='/employee-dashboard/leaves8/:id' element={<LeaveList9/>}></Route>
           <Route path='/employee-dashboard/leaves9/:id' element={<LeaveList10/>}></Route>
+          <Route path='/employee-dashboard/leaves10/:id' element={<LeaveList11/>}></Route>
 
           <Route path='/employee-dashboard/add-leave' element={<AddLeave />}></Route>
           <Route path='/employee-dashboard/add-leave2' element={<AddLeave2 />}></Route>
@@ -158,6 +165,7 @@ function App() {
           <Route path='/employee-dashboard/add-leave8' element={<AddLeave8 />}></Route>
           <Route path='/employee-dashboard/add-leave9' element={<AddLeave9 />}></Route>
           <Route path='/employee-dashboard/add-leave10' element={<AddLeave10 />}></Route>
+          <Route path='/employee-dashboard/add-leave11' element={<AddLeave11 />}></Route>
 
           <Route path='/employee-dashboard/setting' element={<Setting />}></Route>
 

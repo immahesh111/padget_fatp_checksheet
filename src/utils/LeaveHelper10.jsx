@@ -67,12 +67,12 @@ export const LeaveButtons = ({ row }) => {
     const navigate = useNavigate();
 
     const handleView = () => {
-        navigate(`/admin-dashboard/leaves9/${row._id}`);
+        navigate(`/admin-dashboard/leaves10/${row._id}`);
     };
 
     const handleExport = async () => {
         // Fetch the leave details to export
-        const response = await fetch(`https://fatp-api.onrender.com/api/leave9/detail/${row._id}`, {
+        const response = await fetch(`https://fatp-api.onrender.com/api/leave10/detail/${row._id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -108,7 +108,7 @@ export const LeaveButtons = ({ row }) => {
     </div>
 </div>
             
-            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE CHECKLIST FMT TESTER</h2>
+            <h2 style="font-weight: bold; margin-top: 20px;">DAILY MAINTENANCE CHECKLIST RF TESTER</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
                 <thead>
                     <tr>
@@ -123,7 +123,7 @@ export const LeaveButtons = ({ row }) => {
                 <tbody>
                      <tr>
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cleaning</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">CPU and Jig and fixture</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Instrument and shield box</td>
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">No Dirt</td>
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">Visual</td>
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">Cloth and Brush</td>
@@ -139,7 +139,7 @@ export const LeaveButtons = ({ row }) => {
                         </tr>
                         <tr>
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">Change</td>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Ensure the fixture should not have any misalignment and no dust particles</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the RF cable connection condition bend or loose connection</td>
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">Firm Contact</td>
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">Lock</td>
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">NA</td>
@@ -149,7 +149,7 @@ export const LeaveButtons = ({ row }) => {
                     <!-- Question 4 -->
                     <tr>
                         <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check/ Change</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the correct Tool and parameter selected according model requirements</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the coupler position and decvice seating without movement</td>
                         <td style="border: 1px solid #000; padding: 8px; text-align:center">No abnormalities</td>
                         <td style="border: 1px solid #000; padding: 8px; text-align:center">Visual</td>
                         <td style="border: 1px solid #000; padding: 8px; text-align: center;">NA</td>
@@ -159,7 +159,7 @@ export const LeaveButtons = ({ row }) => {
                     <!-- Question 5 -->
                     <tr>
                         <td style="border: 1px solid #000; padding: 8px; text-align:center">Check</td>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the correct script selected according to model requirements</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the correct script selected according model requirements</td>
                         <td style="border: 1px solid #000; padding: 8px; text-align:center">No abnormalities</td>
                         <td style="border: 1px solid #000; padding: 8px; text-align:center">Visual</td>
                         <td style="border: 1px solid #000; padding: 8px; text-align: center;">NA</td>
