@@ -140,7 +140,7 @@ const Add8 = () => {
                                 {/* Question 1 */}
                                 <tr>
                                     <td className="border border-gray-300 p-2 text-center">Cleaning</td>
-                                    <td className="border border-gray-300 p-2 text-center">level meter ,Axis meter and gray card</td>
+                                    <td className="border border-gray-300 p-2 text-center">Level meter ,Axis meter and gray card</td>
                                     <td className="border border-gray-300 p-2 text-center">No Dirt</td>
                                     <td className="border border-gray-300 p-2 text-center">Visual</td>
                                     <td className="border border-gray-300 p-2 text-center">Cloth & Brush</td>

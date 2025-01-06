@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Detail8 = () => {
+const Detail9 = () => {
     const { id } = useParams();
     const [leave, setLeave] = useState(null);
     const [selectedApprover, setSelectedApprover] = useState(''); // State for selected approver
@@ -19,7 +19,7 @@ const Detail8 = () => {
     useEffect(() => {
         const fetchLeave = async () => {
             try {
-                const response = await axios.get(`https://fatp-api.onrender.com/api/leave8/detail/${id}`, {
+                const response = await axios.get(`https://fatp-api.onrender.com/api/leave9/detail/${id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
@@ -40,7 +40,7 @@ const Detail8 = () => {
     }, [id]);
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`https://fatp-api.onrender.com/api/leave8/${id}`, { status, approver: selectedApprover }, {
+            const response = await axios.put(`https://fatp-api.onrender.com/api/leave9/${id}`, { status, approver: selectedApprover }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -53,7 +53,7 @@ const Detail8 = () => {
                     approver: selectedApprover // Store the selected approver's name in state
                 }));
 
-                navigate('/admin-dashboard/leaves8');
+                navigate('/admin-dashboard/leaves9');
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
@@ -129,7 +129,7 @@ const Detail8 = () => {
                             {/* Display Raw Material Storage Questions and Answers */}
                             {leave.rawMaterialStorage && (
                                 <div className="border-t border-b pt-4 pb-4">
-                                    <h3 className="text-lg font-bold mb-4">DAILY MAINTENANCE CHECKLIST FMT TESTER</h3>
+                                    <h3 className="text-lg font-bold mb-4">DAILY MAINTENANCE CHECKLIST CURRENT TESTER</h3>
                                     <table className="min-w-full border-collapse border border-gray-300">
                                         <thead>
                                             <tr>
@@ -145,7 +145,7 @@ const Detail8 = () => {
                                             {/* Question 1 */}
                                             <tr>
                                                 <td className="border border-gray-300 p-2 text-center">Cleaning</td>
-                                                <td className="border border-gray-300 p-2 text-center">CPU and Jig and fixture</td>
+                                                <td className="border border-gray-300 p-2 text-center">Power supply and Jig and fixture</td>
                                                 <td className="border border-gray-300 p-2 text-center">No Dirt</td>
                                                 <td className="border border-gray-300 p-2 text-center">Visual</td>
                                                 <td className="border border-gray-300 p-2 text-center">Cloth and Brush</td>
@@ -169,7 +169,7 @@ const Detail8 = () => {
                                             {/* Question 3 */}
                                             <tr>
                                                 <td className="border border-gray=300 p=2 text-center">Change</td>
-                                                <td className="border border-gray=300 p=2 text-center">Ensure the fixture alignment should not have any bend and No dust particles</td>
+                                                <td className="border border-gray=300 p=2 text-center">Ensure the fixture probe should not have any bend and No dust particles</td>
                                                 <td className="border border-gray=300 p=2 text-center">Firm Contact</td>
                                                 <td className="border border-gray=300 p=2 text-center">Lock</td>
                                                 <td className="border border-gray-300 p-2 text-center">NA</td>
@@ -223,4 +223,4 @@ const Detail8 = () => {
     );
 };
 
-export default Detail8;
+export default Detail9;
