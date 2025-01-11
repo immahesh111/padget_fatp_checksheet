@@ -222,6 +222,21 @@ const AdminSidebar = ({ isOpen }) => {
         </NavLink>
 
         <NavLink
+          to="/admin-dashboard/leaves11"
+          className={({ isActive }) => `
+    ${isActive ? "bg-white" : ""} 
+    flex items-center space-x-4 block py-2.5 px-4 rounded
+  `}
+        >
+          {({ isActive }) => (
+            <>
+              <FaCalendarAlt className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Auto Screwing Machine Approval</span>
+            </>
+          )}
+        </NavLink>
+
+        <NavLink
           to="/admin-dashboard/report"
           className={({ isActive }) => `
     ${isActive ? "bg-white" : ""} 
@@ -235,6 +250,8 @@ const AdminSidebar = ({ isOpen }) => {
             </>
           )}
         </NavLink>
+
+        
 
         <NavLink
           to="/admin-dashboard/settings"

@@ -210,6 +210,21 @@ const Sidebar = ({ isOpen }) => {
         </NavLink>
 
         <NavLink
+          to={`/employee-dashboard/leaves11/${user._id}`}
+          className={({ isActive }) => `
+    ${isActive ? "bg-white" : ""}
+    flex items-center space-x-4 block py-2.5 px-4 rounded
+  `}
+        >
+          {({ isActive }) => (
+            <>
+              <FaBuilding className={`${isActive ? 'text-custom-purple' : 'text-white'}`} />
+              <span className={`${isActive ? 'text-custom-purple' : 'text-white'}`}>Auto Screwing Machine</span>
+            </>
+          )}
+        </NavLink>
+
+        <NavLink
           to="/employee-dashboard/setting"
           className={({ isActive }) => `
     ${isActive ? "bg-white" : ""} 
