@@ -306,7 +306,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question6"
                                                     value="Yes"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -317,7 +317,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center mt-2">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question6"
                                                     value="No"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -338,7 +338,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question7"
                                                     value="Yes"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -349,7 +349,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center mt-2">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question7"
                                                     value="No"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -370,7 +370,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question8"
                                                     value="Yes"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -381,7 +381,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center mt-2">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question8"
                                                     value="No"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -402,7 +402,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question9"
                                                     value="Yes"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -413,7 +413,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center mt-2">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question9"
                                                     value="No"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -434,7 +434,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question10"
                                                     value="Yes"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -445,7 +445,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center mt-2">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question10"
                                                     value="No"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -466,7 +466,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question11"
                                                     value="Yes"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
@@ -477,7 +477,7 @@ const Add12 = () => {
                                             <label className="inline-flex items-center mt-2">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question5"
+                                                    name="rawMaterialStorage.question11"
                                                     value="No"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
