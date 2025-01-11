@@ -8,11 +8,14 @@ const Sidebar = ({ isOpen }) => {
   const { user } = useAuth();
 
   return (
-    <div className={`bg-custom-purple text-white h-screen fixed left-0 top-0 bottom-0 space-y-2 w-64 transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
-      <div className='bg-white h-12 flex items-center justify-center'>
+    <div className={`bg-custom-purple text-white h-screen fixed left-0 top-0 bottom-0 w-64 transition-transform duration-300 flex flex-col ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
+      {/* Fixed logo section */}
+      <div className='bg-white h-12 flex items-center justify-center flex-shrink-0'>
         <img src={logo} alt="CheckSheets Logo" className='h-10' />
       </div>
-      <div className='px-4'>
+      
+      {/* Scrollable navigation section */}
+      <div className='px-4 flex-1 overflow-y-auto'>
         <NavLink
           to="/employee-dashboard"
           className={({ isActive }) => `
