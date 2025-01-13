@@ -20,12 +20,12 @@ const Login = () => {
                 {email,password}
             );
             if(response.data.success){
+                login(response.data.user)
+                localStorage.setItem("token",response.data.token)
                 if(response.data.user.role === "admin"){
-                    login(response.data.user)
-                    localStorage.setItem("token",response.data.token)
                     navigate('/admin-dashboard')
-                } else {
-                    setError("Only admin users can login")
+                }else{
+                    navigate('/employee-dashboard')
                 }
             }
         }catch(error){
