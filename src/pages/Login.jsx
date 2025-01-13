@@ -11,26 +11,31 @@ const Login = () => {
     const {login} = useAuth()
     const navigate = useNavigate()
 
-    const handleSubmit = async (e) => {
+    const handleSubmit =async (e) => {
+        
         e.preventDefault()
+       
         try{
             const response = await axios.post("https://fatp-api.onrender.com/api/auth/login",
-                {email, password}
+                {email,password}
             );
-            if(response.data.success && response.data.user.role === "admin"){
+            if(response.data.success){
                 login(response.data.user)
-                localStorage.setItem("token", response.data.token)
-                navigate('/admin-dashboard')
-            } else {
-                setError("Unauthorized access")
+                localStorage.setItem("token",response.data.token)
+                if(response.data.user.role === "admin"){
+                    navigate('/admin-dashboard')
+                }else{
+                    navigate('/employee-dashboard')
+                }
             }
-        } catch(error){
+        }catch(error){
             if(error.response && !error.response.data.success) {
                 setError(error.response.data.error)
-            } else {
+            }else{
                 setError("Server Error")
             }
         }
+
     };
 
   return (
