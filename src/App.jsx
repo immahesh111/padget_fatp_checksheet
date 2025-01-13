@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
@@ -75,7 +74,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />}></Route>
+        <Route path="/" element={<Navigate to="/employee-dashboard" />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/admin-dashboard" element={
           <PrivateRoutes>
@@ -139,15 +138,7 @@ function App() {
 
           <Route path="/admin-dashboard/setting" element={<Setting />}></Route>
         </Route>
-        <Route path="/employee-dashboard" element={
-          <PrivateRoutes>
-            <RoleBasedRoutes requiredRole={["admin", "employee"]}>
-              <EmployeeDashboard />
-            </RoleBasedRoutes>
-
-          </PrivateRoutes>
-        }>
-
+        <Route path="/employee-dashboard" element={<EmployeeDashboard />}>
           <Route index element={<Summary />}></Route>
 
           <Route path='/employee-dashboard/profile/:id' element={<View />}></Route>
