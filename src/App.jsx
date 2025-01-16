@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
@@ -75,16 +74,19 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />}></Route>
+        {/* Change default route to employee dashboard */}
+        <Route path="/" element={<Navigate to="/employee-dashboard" />}></Route>
+        
+        {/* Keep login route for admin only */}
         <Route path="/login" element={<Login />}></Route>
+        
+        {/* Keep admin routes protected */}
         <Route path="/admin-dashboard" element={
           <PrivateRoutes>
             <RoleBasedRoutes requiredRole={["admin"]}>
               <AdminDashboard />
             </RoleBasedRoutes>
-
           </PrivateRoutes>
-
         }>
           <Route index element={<AdminSummary />}></Route>
 
@@ -139,17 +141,10 @@ function App() {
 
           <Route path="/admin-dashboard/setting" element={<Setting />}></Route>
         </Route>
-        <Route path="/employee-dashboard" element={
-          <PrivateRoutes>
-            <RoleBasedRoutes requiredRole={["admin", "employee"]}>
-              <EmployeeDashboard />
-            </RoleBasedRoutes>
 
-          </PrivateRoutes>
-        }>
-
+        {/* Employee dashboard with no auth - direct access */}
+        <Route path="/employee-dashboard" element={<EmployeeDashboard />}>
           <Route index element={<Summary />}></Route>
-
           <Route path='/employee-dashboard/profile/:id' element={<View />}></Route>
           <Route path='/employee-dashboard/leaves/:id' element={<LeaveList />}></Route>
           <Route path='/employee-dashboard/leaves1/:id' element={<FAList/>}></Route>
