@@ -118,33 +118,33 @@ export const LeaveButtons = ({ row }) => {
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question1 || 'Not answered'}</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Screw feeder top Cover</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Emergency,Start & RST switch function , Check plasma path </td>
                             
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question2 || 'Not answered'}</td>
                         </tr>
                         <tr>
-                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Machine 5S & Cleaning</td>
+                            <td style="border: 1px solid #000; padding: 8px; text-align: center;">Height of the gun 13-15mm, Plasma power supply, Plasma power supply 150-350W </td>
                             
                             <td style="border: 1px solid #000; padding: 8px; text-align: center;">${leaveDetails.rawMaterialStorage?.question3 || 'Not answered'}</td>
                         </tr>
                         <tr>
                     <!-- Question 4 -->
                     <tr>
-                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Check the Machine Safety cover</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Plasma cleaning speed 100-300mm/s,</td>
                         
                         <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</td>
                     </tr>
         
                     <!-- Question 5 -->
                     <tr>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the Emergency , Start & RST switch Function</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Plasma temperature 20-40℃</td>
                         
                         <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</td>
                     </tr>
 
                     <!-- Question 6 -->
                     <tr>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Check the Feeder Vibration should not be higher side</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:center">If found defective, describe the issues & Inform to Shift Incharge.</td>
                         
                         <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question6 || 'Not answered'}</td>
                     </tr>

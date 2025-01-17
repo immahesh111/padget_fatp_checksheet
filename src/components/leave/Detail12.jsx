@@ -144,7 +144,7 @@ const Detail12 = () => {
 
                                             {/* Question 2 */}
                                             <tr>
-                                                <td className="border border-gray-300 p-2 text-center">Check the Screw feeder top Cover</td>
+                                                <td className="border border-gray-300 p-2 text-center">Check the Emergency,Start & RST switch function , Check plasma path </td>
                                                 
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question2 || 'Not answered'}
@@ -153,7 +153,7 @@ const Detail12 = () => {
 
                                             {/* Question 3 */}
                                             <tr>
-                                                <td className="border border-gray=300 p=2 text-center">Check the Machine 5S & Cleaning</td>
+                                                <td className="border border-gray=300 p=2 text-center">Height of the gun 13-15mm, Plasma power supply, Plasma power supply 150-350W </td>
                                                 
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question3 || 'Not answered'}
@@ -162,7 +162,7 @@ const Detail12 = () => {
 
                                             {/* Question 4 */}
                                             <tr>
-                                                <td className="border border-gray=300 p=2 text-center">Check the Machine Safety cover</td>
+                                                <td className="border border-gray=300 p=2 text-center">Plasma cleaning speed 100-300mm/s,</td>
                                                 
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question4 || 'Not answered'}
@@ -171,7 +171,7 @@ const Detail12 = () => {
 
                                             {/* Question 5 */}
                                             <tr>
-                                                <td className="border border-gray=300 p=2 text-center">Check the Emergency , Start & RST switch Function</td>
+                                                <td className="border border-gray=300 p=2 text-center">Plasma temperature 20-40℃ </td>
                                                 
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question5 || 'Not answered'}
@@ -180,7 +180,7 @@ const Detail12 = () => {
 
                                             {/* Question 6 */}
                                             <tr>
-                                                <td className="border border-gray=300 p=2 text-center">Check the Feeder Vibration should not be higher side</td>
+                                                <td className="border border-gray=300 p=2 text-center">If found defective, describe the issues & Inform to Shift Incharge.</td>
                                                 
                                                 <td className="border border-gray=300 p=2 text-center">
                                                     {leave.rawMaterialStorage.question6 || 'Not answered'}
