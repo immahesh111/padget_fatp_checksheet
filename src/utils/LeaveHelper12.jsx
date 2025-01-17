@@ -130,23 +130,23 @@ export const LeaveButtons = ({ row }) => {
                         <tr>
                     <!-- Question 4 -->
                     <tr>
-                        <td style="border: 1px solid #000; padding: 8px; text-align: center;">Plasma cleaning speed 100-300mm/s,</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left;">Plasma cleaning speed 100-300mm/s,</td>
                         
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">${leaveDetails.rawMaterialStorage?.question4 || 'Not answered'}</td>
                     </tr>
         
                     <!-- Question 5 -->
                     <tr>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">Plasma temperature 20-40℃</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">Plasma temperature 20-40℃</td>
                         
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">${leaveDetails.rawMaterialStorage?.question5 || 'Not answered'}</td>
                     </tr>
 
                     <!-- Question 6 -->
                     <tr>
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">If found defective, describe the issues & Inform to Shift Incharge.</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">If found defective, describe the issues & Inform to Shift Incharge.</td>
                         
-                        <td style="border: 1px solid #000; padding: 8px; text-align:center">${leaveDetails.rawMaterialStorage?.question6 || 'Not answered'}</td>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">${leaveDetails.rawMaterialStorage?.question6 || 'Not answered'}</td>
                     </tr>
 
                    
