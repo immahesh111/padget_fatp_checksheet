@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const Detail12 = () => {
+const Detail13 = () => {
     const { id } = useParams();
     const [leave, setLeave] = useState(null);
     const [selectedApprover, setSelectedApprover] = useState(''); // State for selected approver
@@ -19,7 +19,7 @@ const Detail12 = () => {
     useEffect(() => {
         const fetchLeave = async () => {
             try {
-                const response = await axios.get(`https://fatp-api.onrender.com/api/leave12/detail/${id}`, {
+                const response = await axios.get(`https://fatp-api.onrender.com/api/leave13/detail/${id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
@@ -40,7 +40,7 @@ const Detail12 = () => {
     }, [id]);
     const changeStatus = async (id, status) => {
         try {
-            const response = await axios.put(`https://fatp-api.onrender.com/api/leave12/${id}`, { status, approver: selectedApprover }, {
+            const response = await axios.put(`https://fatp-api.onrender.com/api/leave13/${id}`, { status, approver: selectedApprover }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -53,7 +53,7 @@ const Detail12 = () => {
                     approver: selectedApprover // Store the selected approver's name in state
                 }));
 
-                navigate('/admin-dashboard/leaves12');
+                navigate('/admin-dashboard/leaves13');
             }
         } catch (error) {
             if (error.response && !error.response.data.success) {
@@ -210,4 +210,4 @@ const Detail12 = () => {
     );
 };
 
-export default Detail12;
+export default Detail13;
