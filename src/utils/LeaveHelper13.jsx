@@ -149,6 +149,20 @@ export const LeaveButtons = ({ row }) => {
                         <td style="border: 1px solid #000; padding: 8px; text-align:left">${leaveDetails.rawMaterialStorage?.question6 || 'Not answered'}</td>
                     </tr>
 
+                    <!-- Question 7 -->
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">If found defective, describe the issues & Inform to Shift Incharge.</td>
+                        
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">${leaveDetails.rawMaterialStorage?.question7 || 'Not answered'}</td>
+                    </tr>
+
+                    <!-- Question 8 -->
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">If found defective, describe the issues & Inform to Shift Incharge.</td>
+                        
+                        <td style="border: 1px solid #000; padding: 8px; text-align:left">${leaveDetails.rawMaterialStorage?.question8 || 'Not answered'}</td>
+                    </tr>
+
                    
                     
                 </tbody>

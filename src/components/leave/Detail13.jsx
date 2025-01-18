@@ -187,6 +187,24 @@ const Detail13 = () => {
                                                 </td>
                                             </tr> 
 
+                                            {/* Question 7 */}
+                                            <tr>
+                                                <td className="border border-gray=300 p=2 text-center">If found defective, describe the issues & Inform to Shift Incharge.</td>
+                                                
+                                                <td className="border border-gray=300 p=2 text-center">
+                                                    {leave.rawMaterialStorage.question7 || 'Not answered'}
+                                                </td>
+                                            </tr> 
+
+                                            {/* Question 8 */}
+                                            <tr>
+                                                <td className="border border-gray=300 p=2 text-center">If found defective, describe the issues & Inform to Shift Incharge.</td>
+                                                
+                                                <td className="border border-gray=300 p=2 text-center">
+                                                    {leave.rawMaterialStorage.question8 || 'Not answered'}
+                                                </td>
+                                            </tr> 
+
                                             
 
                                         </tbody>
