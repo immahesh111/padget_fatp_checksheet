@@ -369,7 +369,7 @@ const Add14 = () => {
                                             <label className="inline-flex items-center">
                                                 <input
                                                     type="radio"
-                                                    name="rawMaterialStorage.question7"
+                                                    name="rawMaterialStorage.question8"
                                                     value="Yes"
                                                     onChange={handleChange}
                                                     className="form-radio h-4 w-4 text-blue-600"
