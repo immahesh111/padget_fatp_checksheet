@@ -67,7 +67,7 @@ export const LeaveButtons = ({ row }) => {
     const navigate = useNavigate();
 
     const handleView = () => {
-        navigate(`/admin-dashboard/leaves12/${row._id}`);
+        navigate(`/admin-dashboard/leaves13/${row._id}`);
     };
 
     const handleExport = async () => {
