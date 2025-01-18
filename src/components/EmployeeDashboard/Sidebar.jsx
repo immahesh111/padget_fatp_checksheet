@@ -240,7 +240,7 @@ const Sidebar = ({ isOpen }) => {
         </NavLink>
 
         <NavLink
-          to={`/employee-dashboard/leaves12/${user._id}`}
+          to={`/employee-dashboard/leaves13/${user._id}`}
           className={({ isActive }) => `
     ${isActive ? "bg-white" : ""}
     flex items-center space-x-4 block py-2.5 px-4 rounded
